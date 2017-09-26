@@ -1,0 +1,66 @@
+// ######################################
+// Hover effects for main navigation
+// Link with inspiration: https://tympanus.net/Development/LineMenuStyles/
+// ######################################
+
+
+// Effect - 1
+// ###############
+// Structure:
+// <nav class="nav">
+// -- <ul class="nav__list">
+// -- -- <li class="nav__item">
+// -- -- -- <a class="nav__link" href="#home">
+// -- -- -- -- <span class="nav__t" data-letters="home">Home</span>
+// -- -- -- </a>
+// -- -- </li>
+// -- -- ... ...
+// -- </ul>
+// </nav>
+// ###############
+
+%nav_effect_1
+  .nav__link
+    display: inline-block
+    position: relative
+    overflow: hidden
+    padding: 3px 5px
+    line-height: 1
+
+    &:after
+      content: ''
+      position: absolute
+      height: 100%
+      width: 100%
+      top: 0
+      right: 0
+      z-index: -1
+      background: $color_secondary
+      transform: translate3d(102%,0,0)
+      transition: transform 0.5s
+      transition-timing-function: cubic-bezier(0.7,0,0.3,1)
+
+    &:hover::after
+      transform: translate3d(0,0,0)
+    
+    &:hover .nav__t:before
+      width: 100%
+
+  .nav__t
+    display: block
+    position: relative
+
+    &:before
+      content: attr(data-letters)
+      position: absolute
+      color: #ffffff
+      left: 0
+      overflow: hidden
+      white-space: nowrap
+      width: 0%
+      transition: width 0.5s
+      transition-timing-function: cubic-bezier(0.7,0,0.3,1)
+
+=nav_effect_1
+  @extend %nav_effect_1
+// ###############
