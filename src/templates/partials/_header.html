@@ -1,6 +1,14 @@
 <header class="header">
   <div class="container">
     <div class="header__row">
+        <div class="header__burger burger">
+          <div class="burger__ico">
+              <div class="burger__bar"></div>
+              <div class="burger__bar"></div>
+              <div class="burger__bar"></div>
+          </div>
+          <span class="burger__text">Menu</span>
+        </div>
         <div class="header__logo">
             {{mixins.icon('logo')}}
         </div>
@@ -38,10 +46,13 @@
             </li>
           </ul>
         </nav>
-        <div class="lang header__lang">
-          <ul class="lang__list">
-            <li class="lang__item">ENG</li>
-          </ul>
+        <div class="header__functional">
+          <button class="search-btn js-search" type="button">{{mixins.icon('search')}}</button>
+          <div class="lang header__lang">
+            <ul class="lang__list">
+              <li class="lang__item">ENG</li>
+            </ul>
+          </div>
         </div>
     </div>
   </div>

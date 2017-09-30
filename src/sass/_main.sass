@@ -1,7 +1,10 @@
 .icon-logo
 	fill: $color_secondary
-	width: 7.865em
-	height: 3.25em
+	width: 180px
+	height: 74px
+	+r(1199)
+		width: 140px
+		height: 57px
 
 .container
 	margin: 0 auto
@@ -9,27 +12,11 @@
 	padding: 0 20px
 	+clr
 
-.header
-	margin-top: 20px 
-	&__row
-		display: flex
-		justify-content: space-between
-
-.lang
-	&__list
-		position: relative
-		width: 40px
-		height: 40px
-		display: inline-block
-		border: 1px solid $color_t
-	&__item
-		+vcenter
-
 .welcome
 	position: relative
 	height: 500px
 	height: calc(100vh - 200px) //header.height x 2
-	margin-top: 60px
+	margin-top: 15px
 	min-height: 300px
 
 	&__container
