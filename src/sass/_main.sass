@@ -14,13 +14,14 @@
 
 .welcome
 	position: relative
-	height: 500px
-	height: calc(100vh - 200px) //header.height x 2
-	margin-top: 15px
-	min-height: 300px
+	height: calc(100vh - 100px) // minus header height
+	min-height: 500px
+	+r(1199)
+		height: calc(100vh - 82px) // minus header height
 
 	&__container
-		height: 100%
+		height: 90%
+		padding-top: 15px
 
 	&__video
 		position: relative
@@ -33,33 +34,64 @@
 
 .scroll-down
 	+vcenter_gor
-	width: 40px
-	height: 40px
-	bottom: -10px
-	transform: translateY(100%)
+	bottom: 30px
+	cursor: pointer
 
-	i
+	&__arrow,
+	&__arrow:before,
+	&__arrow:after
 		position: absolute
-		top: 0
-		left: 0
-		background: $color_scrollBorder
+		left: 50%
 
-	i:nth-child(1), i:nth-child(3)
-		width: 100%
-		height: 1px
+	&__arrow
+		width: 30px
+		height: 30px
+		top: 50%
+		margin: -20px 0 0 -20px
+		transform: rotate(45deg)
+		border-left: none
+		border-top: none
+		border-right: 2px $color_t solid
+		border-bottom: 2px $color_t solid
+
+	&__arrow:before
+		content: ""
+		width: 20px
+		height: 20px
+		top: 50%
+		margin: -10px 0 0 -10px
+		border-left: none
+		border-top: none
+		border-right: 1px $color_secondary solid
+		border-bottom: 1px $color_secondary solid
+		animation-duration: 2s
+		animation-iteration-count: infinite
+		animation-name: arrow
+
+	&__arrow:after
+		content: ""
+		width: 20px
+		height: 20px
+		top: 50%
+		margin: -10px 0 0 -10px
+		border-left: none
+		border-top: none
+		border-right: 2px $color_secondary solid
+		border-bottom: 2px $color_secondary solid
+		opacity: 0
+		transition: all .6s
+		transform: translate(5px, 5px)
 	
-	i:nth-child(2), i:nth-child(4)
-		width: 1px
-		height: 100%
+	&:hover &__arrow:after
+		opacity: 1
+		transform: translateY(0)
 
-	i:nth-child(3)
-		top: auto
-		bottom: 0
-
-	i:nth-child(2)
-		left: auto
-		right: 0
-
+@keyframes arrow
+	0%
+		opacity: 1
+	100%
+		opacity: 0
+		transform: translate(-10px,-10px)
 
 #bgvid
 	position: absolute

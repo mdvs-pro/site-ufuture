@@ -14,7 +14,7 @@ function dotsAnimation() {
   function init() {
 
       container = document.createElement( 'div' );
-      document.getElementById("dots").appendChild( container );
+      document.getElementById("about").appendChild( container );
 
       camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 1, 10000 );
       camera.position.z = 10000;
