@@ -1,7 +1,5 @@
 // import sayHello from './lib/sayHello.js';
-import dotsAnimation from './lib/dotsAnimation.js';
 import DomLib from './lib/DomLib.js';
-dotsAnimation();
 
 setTimeout(function(){
   testBodyStatus();

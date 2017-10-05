@@ -1,0 +1,33 @@
+.welcome
+	position: relative
+	height: calc(100vh - 100px) // minus header height
+	min-height: 500px
+	+r(1199)
+		height: calc(100vh - 82px) // minus header height
+
+	&__container
+		height: 90%
+		padding-top: 15px
+
+	&__video
+		position: relative
+		height: 100%
+		overflow: hidden
+
+	&__placeholder
+		height: 100%
+		background: #b1b1b1
+
+#bgvid
+	position: absolute
+	top: 50%
+	left: 50%
+	min-width: 100%
+	min-height: 100%
+	width: auto
+	height: auto
+	z-index: -100
+	transform: translateX(-50%) translateY(-50%)
+	background: url('//demosthenes.info/assets/images/polina.jpg') no-repeat
+	background-size: cover
+	transition: 1s opacity
