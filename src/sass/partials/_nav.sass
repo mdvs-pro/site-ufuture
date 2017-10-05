@@ -11,10 +11,21 @@
     text-decoration: none
     color: $color_t
     border-right: 2px solid $color_secondary
+    text-decoration: none
     +r(1199)
       font-size: 16px
     &:hover
       color: $color_secondary
   +nav_effect_1
   +r(991)
-    display: none;
+    display: none
+
+.footer__nav
+  font-size: 15px
+  .nav__item
+    display: block
+  .nav__link
+    border-right: none
+    padding: 0
+    &:after
+      display: none
