@@ -2,8 +2,10 @@
   font-family: $font_secondary
   font-size: 0
   &__item
+    position: relative
     display: inline-block
     text-transform: uppercase
+    z-index: 1
     &:last-child .nav__link
       border-right: none
   &__link
@@ -29,3 +31,15 @@
     padding: 0
     &:after
       display: none
+
+.m-nav
+  &__link
+    font-size: 40px
+    font-family: $font_secondary
+    color: $color_white
+    text-transform: uppercase
+    text-decoration: none
+    transition: color .3s;
+    &:hover
+      color: $color_secondary
+    

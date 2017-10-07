@@ -1,5 +1,6 @@
 // import sayHello from './lib/sayHello.js';
 import DomLib from './lib/DomLib.js';
+import Menu from './lib/Menu.js';
 
 setTimeout(function(){
   testBodyStatus();
@@ -10,3 +11,5 @@ function testBodyStatus(){
   let el = document.querySelector('.out');
   DomLib.triggerClass(el, LOADED_CLASS);
 }
+
+Menu.init();

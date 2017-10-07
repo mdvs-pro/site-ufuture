@@ -1,15 +1,40 @@
 .header
-  margin-top: 20px
+  width: 100%
+  z-index: 1
+  +r(991)
+    position: fixed
+    left: 5%
+    right: 5%
+    width: auto
   &__row
+    position: relative
     display: flex
     justify-content: space-between
-    align-items: center  
+    align-items: center
+    background: $color_white
+    padding-top: 20px
+    z-index: 1
   &__burger
     display: none
     +r(991)
       display: block
   &__functional
     display: flex
+  &__modal
+    position: absolute
+    width: 100%
+    height: 100vh
+    height: calc(100vh - #{$header_mobile_h*2 + 'px'} )
+    background: black
+    overflow: scroll
+    transform: translateY(-150%)
+    transition: transform .3s
+    top: $header_mobile_h + 'px'
+  &__modal-body
+    +vcenter
+
+.modal-open .header__modal
+  transform: translateY(0%)
 
 .lang
 	&__list

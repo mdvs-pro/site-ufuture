@@ -3,7 +3,7 @@
 	height: calc(100vh - 100px) // minus header height
 	min-height: 500px
 	+r(1199)
-		height: calc(100vh - 82px) // minus header height
+		height: calc(100vh - #{$header_mobile_h+'px'}) // minus header height
 
 	&__container
 		height: 90%
