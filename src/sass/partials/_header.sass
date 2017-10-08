@@ -3,8 +3,9 @@
   z-index: 1
   +r(991)
     position: fixed
-    left: 5%
-    right: 5%
+    background: $color_white
+    left: 0
+    right: 0
     width: auto
   &__row
     position: relative
@@ -20,6 +21,8 @@
       display: block
   &__functional
     display: flex
+  &__box
+    position: relative
   &__modal
     position: absolute
     width: 100%
@@ -29,7 +32,6 @@
     overflow: scroll
     transform: translateY(-150%)
     transition: transform .3s
-    top: $header_mobile_h + 'px'
   &__modal-body
     +vcenter
 
