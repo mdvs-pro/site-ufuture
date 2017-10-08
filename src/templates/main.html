@@ -1,5 +1,20 @@
 ---
 title: Index page
+scroll: true
+news_odd:
+- image: img/news_001.jpg
+  title: “HOW TO WRITE A BUSINESS BOOK” (KHARKIV) COURSE
+  odd: true
+- image: img/news_002.jpg
+  title: “HOW TO WRITE A BUSINESS BOOK” (KHARKIV) COURSE
+  odd: false
+news_even:
+- image: img/news_003.jpg
+  title: “HOW TO WRITE A BUSINESS BOOK” (KHARKIV) COURSE
+  odd: true
+- image: img/news_004.jpg
+  title: “HOW TO WRITE A BUSINESS BOOK” (KHARKIV) COURSE
+  odd: false
 ---
 {% extends "layouts/_layout.html" %}
 
@@ -8,6 +23,49 @@ title: Index page
   {% include "partials/_welcome.html" %}
   {% include "partials/_about.html" %}
   {% include "partials/_founder.html" %}
-  {% include "partials/_news.html" %}
+  <section id="news" class="sc news">
+    <div class="container">
+      <div class="container-inner">
+        <header class="sc__header">
+          <h2 class="h2 sc__heading">News</h2>
+        </header>
+        <div class="news__blocks">
+          <div class="news__col news__odd">
+            {% for t in news_odd %}
+              <article class="news__item post">
+                <div class="news__background" style="background-image:url({{t.image}})"></div>
+                <div class="news__content">
+                    <time class="entry-date published updated post__date" datetime="2017-09-28T08:00:38+00:00">April 29, 2017</time>
+                      |  Khmelnytsky's Library
+                    <h3 class="post__title">{{t.title}}</h3>
+                    <p class="post__text">The registration for a free course “How to write a business book” (Kharkiv),
+                        which will be held on March 25 in Kharkiv, starts...</p>
+                    <a href="#" class="read-more">read more ...</a>
+                </div>
+              </article>
+            {% endfor %}
+          </div>
+          <div class="news__col news__even">
+            {% for t in news_even %}
+              <article class="news__item post">
+                <div class="news__background" style="background-image:url({{t.image}})"></div>
+                <div class="news__content">
+                    <time class="entry-date published updated post__date" datetime="2017-09-28T08:00:38+00:00">April 29, 2017</time>
+                      |  Khmelnytsky's Library
+                    <h3 class="post__title">{{t.title}}</h3>
+                    <p class="post__text">The registration for a free course “How to write a business book” (Kharkiv),
+                        which will be held on March 25 in Kharkiv, starts...</p>
+                    <a href="#" class="read-more">read more ...</a>
+                </div>
+              </article>
+            {% endfor %}
+          </div>
+        </div>
+        <footer class="news__footer">
+          <a href="#" class="read-more">read more ...</a>
+        </footer>
+      </div>
+    </div>
+  </section>
   {% include "partials/_footer.html" %}
 {% endblock %}

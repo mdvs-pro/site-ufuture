@@ -12,12 +12,19 @@ document.addEventListener("hashLinkClicked", function(e) {
   if (DomLib.hasClass(el, Menu.activeState)) DomLib.removeClass(el, Menu.activeState)
 });
 
-setTimeout(function(){
-  testBodyStatus();
-}, 4000)
+var controller = new ScrollMagic.Controller();
+var scene = new ScrollMagic.Scene({triggerElement: ".news__blocks", duration: 300})
+// animate color and top border in relation to scroll position
+.setTween(".news__odd", {y: -60})
+.setTween(".news__even", {y: 60})
+.addTo(controller);
 
-function testBodyStatus(){
-  const LOADED_CLASS = 'loaded';
-  let el = document.querySelector('.out');
-  DomLib.triggerClass(el, LOADED_CLASS);
-}
+// setTimeout(function(){
+//   testBodyStatus();
+// }, 4000)
+
+// function testBodyStatus(){
+//   const LOADED_CLASS = 'loaded';
+//   let el = document.querySelector('.out');
+//   DomLib.triggerClass(el, LOADED_CLASS);
+// }
