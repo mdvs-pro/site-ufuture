@@ -1,6 +1,8 @@
 // import sayHello from './lib/sayHello.js';
 import DomLib from './lib/DomLib.js';
 import Menu from './lib/Menu.js';
+import {smooth} from './lib/smoothscroll.min.js';
+import App from './lib/App.js';
 
 setTimeout(function(){
   testBodyStatus();
@@ -13,3 +15,4 @@ function testBodyStatus(){
 }
 
 Menu.init();
+App.init();

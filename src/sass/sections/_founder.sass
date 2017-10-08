@@ -1,8 +1,22 @@
 .founder
   padding: 0
-  &__bg
-    padding-top: 60px
-    padding-bottom: 60px
+  &__row
+    display: flex
     background: $color_secondary
+    +r(1199)
+      display: block
   &__name
     margin-bottom: 20px
+  &__col-l
+    padding-bottom: $section_pad
+  &__col-r
+    font-size: 0
+    text-align: center
+  &__img
+    height: 100%
+    height: calc(100% + 20px)
+    transform: translateY(-20px)
+    +r(1199)
+      max-width: 100%
+      height: auto
+      transform: translateY(0)
