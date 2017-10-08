@@ -82,3 +82,28 @@
 .col-1-4
 	flex: 0 0 25%
 	padding: 0 15px
+
+#scroll-up
+	position: fixed
+	right: 50px
+	bottom: 50px
+	border: 2px $color_secondary solid
+	background: $color_white
+	appearance: none
+	width: 40px
+	height: 40px
+	transform: scale(0)
+	transition: transform .3s
+	&.show
+		transform: scale(1)
+
+.arrow-up
+	display: inline-block
+	width: 15px
+	height: 15px
+	transform: rotate(-135deg)
+	border-left: none
+	border-top: none
+	border-right: 2px $color_t solid
+	border-bottom: 2px $color_t solid
+	transform: rotate(-135deg) translate(-20%, -20%)

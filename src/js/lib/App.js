@@ -1,6 +1,7 @@
 let Ufuture = {
   init: function() {
     this.smoothHashLinks();
+    this.scrollUp();
   },
   smoothHashLinks: function(){
     let linksArray = document.querySelectorAll('a');
@@ -20,6 +21,23 @@ let Ufuture = {
         window.scroll({ top: linkTarget.offsetTop, left: 0, behavior: 'smooth' });
       });
     });
+  },
+  scrollUp: function(){
+    let scrolled;
+    const ACTIVE_CLASS = 'show';
+
+    document.getElementById('scroll-up').addEventListener("click", function(){
+      window.scroll({ top: 0, left: 0, behavior: 'smooth' });
+    });
+    
+    window.onscroll = function() {
+      scrolled = window.pageYOffset || document.documentElement.scrollTop;
+      if (scrolled > 400) {
+        document.getElementById('scroll-up').classList.add(ACTIVE_CLASS);
+      } else {
+        document.getElementById('scroll-up').classList.remove(ACTIVE_CLASS);
+      }
+    }
   }
 }
 
