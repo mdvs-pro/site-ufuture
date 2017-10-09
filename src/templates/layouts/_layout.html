@@ -17,8 +17,10 @@
     <!-- BEGIN content -->
     <div class="out">
       {% block content %}{% endblock %}
-      <button id="scroll-up">
-        <i class="arrow-up"></i>
+      <button id="scroll-up" class="no-btn sq">
+        <span class="sq__box sq__rotate180">
+          <i class="sq__vcenter">{{mixins.icon('arrow-down')}}</i>
+        </span>
       </button>
     </div>
     <!-- END content -->

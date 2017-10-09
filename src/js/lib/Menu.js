@@ -22,16 +22,16 @@ const Menu = {
       }
     });
 
-    mobileMenuList = document.createElement('ul');
+    mobileMenuList = '';
     for (let menuItem in mobileMenu) {
       let  menuChild = `<li class="m-nav__item"> 
         <a class="m-nav__link" href="${ mobileMenu[menuItem]['link'] }">${mobileMenu[menuItem]['title']}</a>
       </li>`
-      mobileMenuList.innerHTML += menuChild;
+      mobileMenuList += menuChild;
     }
     
     navMenu.innerHTML = '';
-    navMenu.appendChild(mobileMenuList);
+    navMenu.innerHTML += mobileMenuList;
   },
   handlersInit: function(){
     document.querySelector('.burger').addEventListener('click', (e)=>{

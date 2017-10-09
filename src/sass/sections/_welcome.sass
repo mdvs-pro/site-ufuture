@@ -3,7 +3,11 @@
 	height: calc(100vh - 100px) // minus header height
 	min-height: 500px
 	+r(1199)
+		height: 100vh
 		height: calc(100vh - #{$header_mobile_h+'px'}) // minus header height
+	+r(991)
+		height: 100vh
+		padding-top: $header_mobile_h + px
 
 	&__container
 		height: 90%
@@ -27,6 +31,6 @@
 	width: 1000px
 	z-index: -100
 	transform: translateX(-50%) translateY(-50%)
-	background: url('../img/u-boat-img.jpg') no-repeat
+	//background: url('../img/u-boat-img.jpg') no-repeat
 	background-size: cover
 	transition: 1s opacity

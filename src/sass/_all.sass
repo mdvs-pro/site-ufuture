@@ -5,71 +5,18 @@
 	+r(1199)
 		width: 140px
 		height: 57px
+	+r(991)
+		width: 127px
+		height: 52px
 
 .scroll-down
-	+vcenter_gor
-	bottom: 30px
-	cursor: pointer
-
-	&__arrow,
-	&__arrow:before,
-	&__arrow:after
-		position: absolute
-		left: 50%
-
-	&__arrow
-		width: 30px
-		height: 30px
-		top: 50%
-		margin: -20px 0 0 -20px
-		transform: rotate(45deg)
-		border-left: none
-		border-top: none
-		border-right: 2px $color_t solid
-		border-bottom: 2px $color_t solid
-
-	&__arrow:before
-		content: ""
-		width: 20px
-		height: 20px
-		top: 50%
-		margin: -10px 0 0 -10px
-		border-left: none
-		border-top: none
-		border-right: 1px $color_secondary solid
-		border-bottom: 1px $color_secondary solid
-		animation-duration: 2s
-		animation-iteration-count: infinite
-		animation-name: arrow
-
-	&__arrow:after
-		content: ""
-		width: 20px
-		height: 20px
-		top: 50%
-		margin: -10px 0 0 -10px
-		border-left: none
-		border-top: none
-		border-right: 2px $color_secondary solid
-		border-bottom: 2px $color_secondary solid
-		opacity: 0
-		transition: all .6s
-		transform: translate(5px, 5px)
-	
-	&:hover &__arrow:after
-		opacity: 1
-		transform: translateY(0)
-
-@keyframes arrow
-	0%
-		opacity: 1
-	100%
-		opacity: 0
-		transform: translate(-10px,-10px)
+	+vcenter_gor_inline
+	bottom: 7px
 
 .read-more
 	font-size: 20px
 	font-family: $font_secondary
+	font-weight: 400
 	line-height: 1.1
 	text-transform: uppercase
 	color: $color_t
@@ -83,19 +30,20 @@
 	flex: 0 0 25%
 	padding: 0 15px
 
+.no-btn
+	+reset_btn
+	
 #scroll-up
 	position: fixed
 	right: 50px
 	bottom: 50px
-	border: 2px $color_secondary solid
 	background: $color_white
-	appearance: none
 	width: 40px
 	height: 40px
-	transform: scale(0)
+	transform: translateZ(0) scale(0)
 	transition: transform .3s
 	&.show
-		transform: scale(1)
+		transform: translateZ(0) scale(1)
 	z-index: 10
 
 .arrow-up
@@ -108,3 +56,32 @@
 	border-right: 2px $color_t solid
 	border-bottom: 2px $color_t solid
 	transform: rotate(-135deg) translate(-20%, -20%)
+
+.sq
+	font-size: 0
+	&__box
+		position: relative
+		display: inline-block
+		width: 40px
+		height: 40px
+		border: 2px solid $color_secondary
+		transition: background .3s cubic-bezier(.19,1,.22,1)
+	&:hover &__box
+		background: $color_secondary
+	&__rotate180
+		transform: rotate(180deg)
+	&__vcenter
+		font-size: 0
+		+vcenter
+	svg
+		font-size: 20px
+	&:hover svg
+		fill: $color_white
+	&-group
+		.sq .sq__box
+			border-left-width: 1px
+			border-right-width: 1px
+		.sq:first-child .sq__box
+			border-left-width: 2px
+		.sq:last-child .sq__box
+			border-right-width: 2px
