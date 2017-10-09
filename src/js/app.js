@@ -12,13 +12,6 @@ document.addEventListener("hashLinkClicked", function(e) {
   if (DomLib.hasClass(el, Menu.activeState)) DomLib.removeClass(el, Menu.activeState)
 });
 
-var controller = new ScrollMagic.Controller();
-var scene = new ScrollMagic.Scene({triggerElement: ".news__blocks", duration: 300})
-// animate color and top border in relation to scroll position
-.setTween(".news__odd", {y: -60})
-.setTween(".news__even", {y: 60})
-.addTo(controller);
-
 // setTimeout(function(){
 //   testBodyStatus();
 // }, 4000)

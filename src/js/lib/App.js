@@ -1,7 +1,22 @@
 let Ufuture = {
+  isMobile: function(){
+    return this.getScreenSize().width < 992;
+  },
   init: function() {
     this.smoothHashLinks();
     this.scrollUp();
+    if (!this.isMobile()) {
+      this.newsAnimation();
+    }
+  },
+  getScreenSize: function(){
+    let w = window,
+    d = document,
+    e = d.documentElement,
+    g = d.getElementsByTagName('body')[0],
+    x = w.innerWidth || e.clientWidth || g.clientWidth,
+    y = w.innerHeight|| e.clientHeight|| g.clientHeight;
+    return {'width':x,'height':y}
   },
   smoothHashLinks: function(){
     let linksArray = document.querySelectorAll('a');
@@ -38,6 +53,14 @@ let Ufuture = {
         document.getElementById('scroll-up').classList.remove(ACTIVE_CLASS);
       }
     }
+  },
+  newsAnimation: function(){
+    let controller = new ScrollMagic.Controller();
+    let scene = new ScrollMagic.Scene({triggerElement: ".news__blocks", duration: 300})
+    // animate color and top border in relation to scroll position
+    .setTween(".news__odd", {y: -60})
+    .setTween(".news__even", {y: 60})
+    .addTo(controller);
   }
 }
 
