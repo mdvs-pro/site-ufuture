@@ -5,9 +5,31 @@ let Ufuture = {
   init: function() {
     this.smoothHashLinks();
     this.scrollUp();
+    this.langSelect();
+    this.searchBar();
     if (!this.isMobile()) {
       this.newsAnimation();
     }
+  },
+  searchBar: function(){
+    let elBtn = document.querySelector('.js-search-btn'); 
+    let elReset = document.querySelector('.js-search-reset'); 
+
+    elBtn.addEventListener('click', function(){
+      document.querySelector('body').classList.add('search-opened');
+    });
+    elReset.addEventListener('click', function(){
+      document.querySelector('body').classList.remove('search-opened');
+    });
+  },
+  langSelect: function(){
+    let className = '.js-lang';
+    let elBtn = document.querySelector('.lang__btn'); 
+    let el = document.querySelector(className);
+
+    elBtn.addEventListener('click', function(){
+     el.classList.toggle('active');
+    });
   },
   getScreenSize: function(){
     let w = window,
