@@ -2,4 +2,6 @@ ProjectTitle: UFuture
 
 PageList:
 - file: main.html
-  ready: 70
+  ready: 75
+- file: single-company-lviv.html
+  ready: 1

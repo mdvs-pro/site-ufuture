@@ -9,6 +9,7 @@
 // +rmin(768)
 // +rmin(992)
 // +rmin(1200)
+// +rmin(1400)
 
 +font('affect', affect-webfont)
 +font('affect', affect_light-webfont, 300)
@@ -25,10 +26,22 @@ body
 	font-size: 17px
 	line-height: 1.4
 	color: $color_t
+	+rmin(1400)
+		font-size: 18px
+		line-height: 1.76
 
 p
 	margin-bottom: 15px
+	+rmin(1400)
+		margin-bottom: 25px
 
+
+h1
+	font-family: $font_secondary
+	font-weight: 700
+	text-transform: uppercase
+	font-size: 40px
+	line-height: 1.2
 h2
 	font-family: $font_secondary
 	font-weight: 700
@@ -41,6 +54,17 @@ h3
 	text-transform: uppercase
 	font-size: 30px
 	line-height: 1.2
+
+.img-responsive
+	max-width: 100%
+	height: auto
+	border: none
+
+.link
+	font-size: 18px
+	line-height: 1.2
+	text-decoration: none
+	color: $color_secondary
 
 .modal-container
 	max-width: 1920px
