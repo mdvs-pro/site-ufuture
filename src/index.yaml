@@ -4,4 +4,18 @@ PageList:
 - file: main.html
   ready: 75
 - file: single-company-lviv.html
-  ready: 1
+  ready: 20
+- file: single-company-airport.html
+  ready: 20
+- file: single-company-ptm-ukraine.html
+  ready: 20
+- file: single-company-udp.html
+  ready: 20
+- file: single-company-udpr.html
+  ready: 20
+- file: single-company-unit-city.html
+  ready: 20
+- file: single-company-biofarma.html
+  ready: 20
+- file: single-company-ip-bt.html
+  ready: 20
