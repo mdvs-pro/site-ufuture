@@ -3,6 +3,7 @@
 // +r(767)
 // +r(991)
 // +r(1199)
+// +r(1399)
 
 // MIN-WIDTH
 // +rmin(576)
@@ -23,7 +24,7 @@ body
 	background: #FFF
 	font-family: "Open Sans",sans-serif
 	font-weight: 300
-	font-size: 17px
+	font-size: 16px
 	line-height: 1.4
 	color: $color_t
 	+rmin(1400)
@@ -34,6 +35,29 @@ p
 	margin-bottom: 15px
 	+rmin(1400)
 		margin-bottom: 25px
+
+blockquote, .blockquote
+	position: relative
+	font-size: 20px
+	font-weight: 400
+	line-height: 1.55
+	border-left: 3px solid $color_secondary
+	padding-left: 45px
+	margin-bottom: 60px
+	+rmin(1400)
+		font-size: 22px
+
+cite
+	position: absolute
+	bottom: -60px
+	right: 0
+	display: block
+	text-align: right
+	font-size: 14px
+	font-style: normal
+	font-weight: 300
+	+rmin(1400)
+		font-size: 16px
 
 
 h1

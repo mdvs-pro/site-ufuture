@@ -77,11 +77,17 @@ let Ufuture = {
     }
   },
   newsAnimation: function(){
+    let animateNews = new TimelineMax();
+    animateNews.to(".news__odd", 0.2, {y: -70},0)
+     .to(".news__even", 0.2, {y: 70},0)
+     .from('.news__background', 0.3, {scale: 1.2},0)  
+
     let controller = new ScrollMagic.Controller();
-    let scene = new ScrollMagic.Scene({triggerElement: ".news__blocks", duration: 300})
-    // animate color and top border in relation to scroll position
-    .setTween(".news__odd", {y: -60})
-    .setTween(".news__even", {y: 60})
+
+    let scene = new ScrollMagic.Scene({
+      triggerElement: ".news__blocks", duration: 300
+    })
+    .setTween(animateNews)
     .addTo(controller);
   }
 }
