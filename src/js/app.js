@@ -4,6 +4,8 @@ import Menu from './lib/Menu.js';
 import {smooth} from './lib/smoothscroll.min.js';
 import App from './lib/App.js';
 
+App.initBody();
+
 Menu.init();
 App.init();
 

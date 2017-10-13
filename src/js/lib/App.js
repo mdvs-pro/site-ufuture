@@ -2,6 +2,15 @@ let Ufuture = {
   isMobile: function(){
     return this.getScreenSize().width < 992;
   },
+  initBody: function(){
+    window.onload = function() {
+      document.querySelector('html').classList.add('fadein');
+      document.querySelector('#preloader').classList.add('fadeout');
+      setTimeout(function() {
+        document.querySelector('#preloader').classList.add('hide');
+      }, 800);
+    };
+  },
   init: function() {
     this.smoothHashLinks();
     this.scrollUp();
