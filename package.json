@@ -1,13 +1,13 @@
 {
-  "name": "miami",
-  "version": "0.1.1",
+  "name": "ufuture",
+  "version": "0.0.5",
   "scripts": {
     "ghpages": "git subtree push --prefix build origin gh-pages",
     "build": "gulp build --production",
     "start": "gulp",
     "precommit": "gulp lint"
   },
-  "authors": "Coderiver <html@coderiver.com.ua>",
+  "authors": "yuchi.mdvs",
   "devDependencies": {
     "autoprefixer": "^6.3.3",
     "browser-sync": "^2.10.0",
