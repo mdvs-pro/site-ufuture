@@ -1,7 +1,7 @@
 ProjectTitle: UFuture
 
 PageList:
-- file: main.html
+- file: front-page.html
   ready: 75
 - file: single-company-lviv.html
   ready: 20
