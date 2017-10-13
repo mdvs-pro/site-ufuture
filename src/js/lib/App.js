@@ -78,7 +78,7 @@ let Ufuture = {
   },
   newsAnimation: function(){
     let animateNews = new TimelineMax();
-    animateNews.to(".news__odd", 0.2, {y: -70},0)
+    animateNews.to(".news__odd", 0.4, {y: -70},0)
      .to(".news__even", 0.2, {y: 70},0)
      .from('.news__background', 0.3, {scale: 1.2},0)  
 
