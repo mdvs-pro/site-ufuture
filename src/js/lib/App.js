@@ -12,6 +12,7 @@ let Ufuture = {
     };
   },
   init: function() {
+    this.lazyLoadImages();
     this.smoothHashLinks();
     this.scrollUp();
     this.langSelect();
@@ -19,6 +20,11 @@ let Ufuture = {
     if (!this.isMobile()) {
       this.newsAnimation();
     }
+  },
+  lazyLoadImages: function(){
+    var bLazy = new Blazy({ 
+      selector: 'img' // all images
+    });
   },
   searchBar: function(){
     let elBtn = document.querySelector('.js-search-btn'); 
