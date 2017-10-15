@@ -5,7 +5,11 @@ PageList:
   ready: 75
 - file: founder.html
   ready: 70
-- file: our-company.html
+- file: news.html
+  ready: 70
+- file: single-news-001.html
+  ready: 70
+- file: our-companies.html
   ready: 70
 - file: single-company-lviv.html
   ready: 20
