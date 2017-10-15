@@ -5,6 +5,8 @@ PageList:
   ready: 75
 - file: founder.html
   ready: 70
+- file: our-company.html
+  ready: 70
 - file: single-company-lviv.html
   ready: 20
 - file: single-company-airport.html
