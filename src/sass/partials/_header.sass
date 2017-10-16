@@ -3,6 +3,8 @@
   background: $color_white
   z-index: 15
   // height: $header_height + px
+  +r(767)
+    padding: 0 15px
   +r(991)
     position: fixed
     left: 0
@@ -71,6 +73,11 @@
     margin-right: -20px
     +r(1700)
       margin-right: -15px
+    +r(1199)
+      margin-right: -8px
+  .nav__item:first-child
+    +r(1600)
+      display: none
   &__modal
     position: absolute
     width: 100%
