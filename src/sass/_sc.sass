@@ -21,3 +21,15 @@
         margin-top:  0px
     &--bwhite:before
       background: #ffffff
+  &.bg-gradient
+    position: relative
+    &:before
+      content: ''
+      background: $color_gray
+      position: absolute
+      top: 0
+      width: 100%
+      height: 450px
+      z-index: -1
+    &--h300:before
+      height: 300px
