@@ -1,251 +1,168 @@
-// /* scroll  */
-//  .scroll-down-dude
-//     margin: 20px auto 0
-//     width: 20px
-//     &:before, &:after
-//       content: ''
-//       display: block
-//       width: 12px
-//       height: 12px
-//       transform: rotate(45deg)
-//       border-bottom: 2px solid #1db7d2
-//       border-right: 2px solid #1db7d2
-//     &:before
-//       animation: down-arrow-before 2.6s cubic-bezier(0.77, 0, 0.175, 1) infinite
-//     &:after
-//       animation: down-arrow-after 2.6s cubic-bezier(0.77, 0, 0.175, 1) infinite
+.scroll-down-dude
+    margin: 20px auto 0
+    width: 20px
+    &:before, &:after
+      content: ''
+      display: block
+      width: 12px
+      height: 12px
+      transform: rotate(45deg)
+      border-bottom: 2px solid #1db7d2
+      border-right: 2px solid #1db7d2
+    &:before
+      animation: down-arrow-before 2.6s cubic-bezier(0.77, 0, 0.175, 1) infinite
+    &:after
+      animation: down-arrow-after 2.6s cubic-bezier(0.77, 0, 0.175, 1) infinite
 
-// @keyframes down-arrow-before
-//   50%
-//     transform: rotate(45deg) translate(70%, 70%)
-//   100%
-//     transform: rotate(45deg) translate(70%, 70%)
+@keyframes down-arrow-before
+  50%
+    transform: rotate(45deg) translate(70%, 70%)
+  100%
+    transform: rotate(45deg) translate(70%, 70%)
 
-// @keyframes down-arrow-after
-//   50%
-//     transform: rotate(45deg) translate(110%, 110%)
-//     opacity: 0
-//   51%
-//     transform: rotate(45deg) translate(-130%, -130%)
-//   100%
-//     transform: rotate(45deg) translate(-70%, -70%)
-//     opacity: 1
+@keyframes down-arrow-after
+  50%
+    transform: rotate(45deg) translate(110%, 110%)
+    opacity: 0
+  51%
+    transform: rotate(45deg) translate(-130%, -130%)
+  100%
+    transform: rotate(45deg) translate(-70%, -70%)
+    opacity: 1
 
-// /* arrow */
+/* arrow */
 
-// .angle
-//   position: absolute
-//   width: 10px
-//   height: 10px
-//   border-right: 2px solid $color_secondary
-//   border-top: 2px solid $color_secondary
-//   transform: translate3d(-50%,-2px,0) rotate(135deg)
-//   transition: all .3s cubic-bezier(.7,0,.3,1)
-//   &-white
-//     position: absolute
-//     width: 10px
-//     height: 10px
-//     border-right: 2px solid #fff
-//     border-top: 2px solid #fff
-//     transform: translate3d(-50%,-2px,0) rotate(135deg)
-//     transition: all .3s cubic-bezier(.7,0,.3,1)
-//   &--right
-//     width: 10px
-//     height: 10px
-//     transform: translate3d(-20%,-3px,0) rotate(45deg)
-//     transition: none
-//     margin-left: 8px
-//     margin-top: 13px
-//     +r(1399)
-//       margin-left: 8px
-//       margin-top: 10px 
-
-
-// /* dot animate */
-// .loading-dot-button
-//   display: inline-block
-
-// .loading-dot
-//     float: left
-//     width: 3px
-//     height: 3px
-//     margin: 0 3px
-//     background: $color_t
-//     border-radius: 50%
-//     opacity: 0
-//     animation: loadingFade 1.5s infinite
-//     &:nth-child(1)
-//       animation-delay: 0s
-//     &:nth-child(2)
-//       animation-delay: 0.1s
-//     &:nth-child(3)
-//       animation-delay: 0.2s
-//     &:nth-child(4)
-//       animation-delay: 0.3s
-
-// @keyframes loadingFade
-//     0%
-//       opacity: 0
-//     50%
-//       opacity: 0.8
-//     100%
-//       opacity: 0
+.angle
+  position: absolute
+  width: 10px
+  height: 10px
+  border-right: 2px solid $color_secondary
+  border-top: 2px solid $color_secondary
+  transform: translate3d(-50%,-2px,0) rotate(135deg)
+  transition: all .3s cubic-bezier(.7,0,.3,1)
+  &-white
+    position: absolute
+    width: 10px
+    height: 10px
+    border-right: 2px solid #fff
+    border-top: 2px solid #fff
+    transform: translate3d(-50%,-2px,0) rotate(135deg)
+    transition: all .3s cubic-bezier(.7,0,.3,1)
+  &--right
+    width: 10px
+    height: 10px
+    transform: translate3d(-20%,-3px,0) rotate(45deg)
+    transition: none
+    margin-left: 8px
+    margin-top: 13px
+    +r(1399)
+      margin-left: 8px
+      margin-top: 10px 
 
 
-// /* founder */
+/* dot animate */
+.loading-dot-button
+  display: inline-block
 
-// .margin-plus-300
-//   display: inline-block
-//   margin-top: -300px
+.loading-dot
+    float: left
+    width: 3px
+    height: 3px
+    margin: 0 3px
+    background: $color_t
+    border-radius: 50%
+    opacity: 0
+    animation: loadingFade 1.5s infinite
+    &:nth-child(1)
+      animation-delay: 0s
+    &:nth-child(2)
+      animation-delay: 0.1s
+    &:nth-child(3)
+      animation-delay: 0.2s
+    &:nth-child(4)
+      animation-delay: 0.3s
 
-// .margin-minus-300
-//   background: $color_gray
-//   margin-top: 300px
-
-// .margin-plus-450
-//   display: inline-block
-//   margin-top: -450px
-
-// .margin-minus-450
-//   background: $color_gray
-//   margin-top: 450px
-
-// /* grid company */
-// .grid
-//   overflow: hidden
-//   padding: 0.5em 0 0 0.5em
-//   max-width: 76em
-//   margin: 0 auto
-//   li
-//     padding: 0 0.5em 0.5em 0
-// 	li > div
-//     background: #808080
-//     padding: 7em 2em
-//     text-align: center
-//   li a
-//     color: $color_white
-	
-// 		@media all and (min-width: 27em) {
-// 			.grid li {
-// 				width: 50%
-// 				float: left
-// 			}
-// 		}
-		
-// 		@media all and (min-width: 40em) {
-// 			.grid li {
-// 				width: 33.3333333%
-// 			}
-// 			.grid li.wide {
-// 				width: 66.666666%
-// 			}
-// 		}
-// 		@media all and (min-width: 60em) {
-// 			.grid li {
-// 				width: 25%
-// 			}
-// 			.grid li.wide {
-// 				width: 50%
-// 			}
-// 		}
-		
-	
-
-// .grid {
-// 	margin: 0 -1em
-// 	overflow: hidden
-// }
-// .grid:target {
-// 	-webkit-animation: fadeout 5s 1 ease-out
-//     -moz-animation: fadeout 5s 1 ease-out 
-//     -o-animation: fadeout 5s 1 ease-out
-//     animation: fadeout 5s 1 ease-out 
-// }
-// .grid > h2 {
-// 	margin-left: 0.45em
-// }
-// .grid > section {
-// 	padding: 1em 1em 0.5em
-// }
-// .grid > section:target {
-// 	-webkit-animation: fadeout 5s 1 ease-out
-//     -moz-animation: fadeout 5s 1 ease-out 
-//     -o-animation: fadeout 5s 1 ease-out
-//     animation: fadeout 5s 1 ease-out 
-// }
-// .grid ul {
-// 	overflow: hidden
-// }
-// .grid ul li {
-// 	margin-bottom: 0.3em
-// }
-// .featured:after {
-// 	content: "*"
-// 	color: #e51837
-// }
+@keyframes loadingFade
+    0%
+      opacity: 0
+    50%
+      opacity: 0.8
+    100%
+      opacity: 0
 
 
-// /*Patterns*/
-// .mod {
-// 	padding: 1em
-// }
-// .pattern {
-// 	background: $color_gray
-// 	border-bottom: 1px solid #808080
-// 	margin-bottom: 1em
-// 	overflow: hidden
-// }
-// .pattern-description h1 {
-// 	font-size: 3.4em
-// 	margin-bottom: 0.5em
-// }
-// .pattern-description {
-// 	max-width: 40em
-// 	margin: 0 auto
-// }
-// .pattern-description ul, .pattern-description ol {
-// 	margin-bottom: 2em
-// }
-// .pattern-description li {
-// 	margin-bottom: 1em
-// }
+/* founder */
+
+.margin-plus-300
+  display: inline-block
+  margin-top: -300px
+
+.margin-minus-300
+  background: $color_gray
+  margin-top: 300px
+
+.margin-plus-450
+  display: inline-block
+  margin-top: -450px
+
+.margin-minus-450
+  background: $color_gray
+  margin-top: 450px
+
+.featured:after
+	content: "*"
+	color: #e51837
+
+/*Patterns*/
+.mod
+	padding: 1em
+
+.pattern
+  background: $color_gray
+  border-bottom: 1px solid #808080
+  margin-bottom: 1em
+  overflow: hidden
+  &-description h1
+    font-size: 3.4em
+    margin-bottom: 0.5em
+  &-description
+    max-width: 40em
+    margin: 0 auto
+  &-description ul, &-description ol
+    margin-bottom: 2em
+  &-description li
+    margin-bottom: 1em
 
 
-
-// @media all and (min-width:40em) {
-	
-// 	.grid ul li {
-// 		width: 50%
-// 		float: left
-// 	}
-// 	.grid ul li:nth-child(odd) {
-// 		padding-right: 1em
-// 		clear: left
-// 	}
-	
-	
-
-// }
-
-
-
-// @media all and (min-width: 54em) {
-	
-// 	.grid > section {
-// 		float: left
-// 		width: 33.3333333%
-// 	}
-// 	.grid > section:nth-of-type(3n+1) {
-// 		clear: left
-// 	}
-// 	.grid ul li {
-// 		width: auto
-// 		float: none
-// 	}
-// 	.grid ul li:nth-child(odd) {
-// 		padding-right: 0
-// 	}
-// }	
-
-	
-		
+.grid
+  display: flex
+  flex-wrap: wrap
+  margin: 0 -15px
+  &__col
+    position: relative
+    flex: 0 0 $grid_1_4
+    flex-basis: $grid_1_4
+    max-width: $grid_1_4
+    height: 300px
+    padding: 0 15px
+    margin-bottom: 15px
+    +r(991)
+      flex: 0 0 $grid_1_3
+      flex-basis: $grid_1_3
+      max-width: $grid_1_3
+    +r(767)
+      flex: 0 0 $grid_1_2
+      flex-basis: $grid_1_2
+      max-width: $grid_1_2
+    +r(600)
+      flex: 0 0 100%
+      flex-basis: 100%
+      max-width: 100%
+  &__inner
+    position: relative
+    background: $color_t
+    height: 100%
+  &__demo
+    position: absolute
+    color: #fff
+    +vcenter
