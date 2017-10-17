@@ -29,11 +29,13 @@
       .post__text, .post__title
         transform: translateX(0)
   &__content
+    position: relative
     padding: 35px
     background: $color_secondary
     opacity: 0
     overflow: hidden
     transition: opacity .3s
+    z-index: 1
   &__face
     position: absolute
     width: 100%
@@ -48,6 +50,6 @@
     background-position: 50% 50%
     background-repeat: none
     background-size: cover
-    z-index: -1
+    z-index: 0
   &__footer
     // margin-top: 120px
