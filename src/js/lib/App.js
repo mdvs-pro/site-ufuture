@@ -100,7 +100,8 @@ let Ufuture = {
     let controller = new ScrollMagic.Controller();
 
     let scene = new ScrollMagic.Scene({
-      triggerElement: ".news__blocks", duration: 300
+      triggerElement: ".news__blocks", duration: 300,
+      triggerHook: 'onEnter', offset: 50
     })
     .setTween(animateNews)
     .addTo(controller);
