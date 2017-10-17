@@ -11,13 +11,14 @@
     margin-bottom: 20px
   &__col-l
     padding-bottom: $section_pad
+    padding-right: 15px
   &__col-r
     font-size: 0
     text-align: center
   &__img
     height: 100%
     height: calc(100% + 20px)
-    transform: translateY(-20px)
+    transform: translateY(-20px)    
     +r(1199)
       max-width: 100%
       height: auto
@@ -27,3 +28,23 @@
   &__blockquote
     padding-left: 0
     border-left-width: 0
+  &__b-1
+    display: none
+    +r(1500)
+      display: inline
+      &-hide
+        display: none
+    +r(1199)
+      &-hide
+        display: inline
+  &__b-2
+    display: none
+    +r(1650)
+      display: inline
+      &-hide
+        display: none
+    +r(1500)
+      display: none
+    +r(1199)
+      &-hide
+        display: inline
