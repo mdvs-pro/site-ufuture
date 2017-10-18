@@ -1,13 +1,8 @@
 .welcome
 	position: relative
-	height: calc(100vh - 100px) // minus header height
+	height: 100vh
 	min-height: 500px
-	+r(1199)
-		height: 100vh
-		height: calc(100vh - #{$header_mobile_h+'px'}) // minus header height
-	+r(991)
-		height: 100vh
-		padding-top: $header_mobile_h + px
+	padding-top: $header_mobile_h + px
 	&__heading
 		position: absolute
 		bottom: 20vh
@@ -57,3 +52,7 @@
 	//background: url('../img/u-boat-img.jpg') no-repeat
 	background-size: cover
 	transition: 1s opacity
+	+r(900)
+		transform: translateX(-60%) translateY(-50%)
+	+r(600)
+		transform: translateX(-75%) translateY(-50%)

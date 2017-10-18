@@ -1,14 +1,12 @@
 .header
-  position: relative
-  width: 100%
   background: $color_white
   z-index: 15
-  // height: $header_height + px
-  +r(991)
-    position: fixed
-    left: 0
-    right: 0
-    width: auto
+  position: fixed
+  left: 0
+  right: 0
+  width: auto
+  & + .sc
+    padding-top: $header_height + px
   &__view
     position: relative
     height: $header_height + px
