@@ -37,6 +37,7 @@
   &__item
     overflow: hidden
     transform: translateZ(0)
+    margin-bottom: 15px
   .modal-open &__link
     +r(991)
       transform: translate(0%,0%)
@@ -47,15 +48,14 @@
     font-size: 40px
     font-family: $font_secondary
     font-weight: 700
-    color: $color_white
+    color: $color_secondary
     text-transform: uppercase
     text-decoration: none
     transition: transform .4s cubic-bezier(.19,1,.22,1), -webkit-transform .4s cubic-bezier(.19,1,.22,1)
     transition-delay: 0s
     +hover
-      color: $color_secondary
+      color: $color_white
     +r(991)
       font-size: 24px
       line-height: 1
-      margin-bottom: 15px
     
