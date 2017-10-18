@@ -16,13 +16,7 @@
     {# {% include "../partials/_media-tags.html" %} #}
   </head>
   <body class="no-touch">
-      <div id="preloader">
-          <div class="blocks">
-            <span class="p-logo">{{mixins.icon('logo-small')}}</span>
-            <div></div>
-            <div></div>
-          </div>
-        </div>
+      {% include "../partials/_body-head.html" %}
     <!-- BEGIN content -->
     <div class="out {% if pageClass %}{{ pageClass }}{% else %}frontpage{% endif %}">
       {% include "../partials/_header.html" %}
@@ -41,14 +35,12 @@
      <!--  {% include "../partials/_news.html" %} -->
       {% include "../partials/_slider-companies.html" %}
       {% include "../partials/_footer.html" %}
-      <button id="scroll-up" class="no-btn sq">
-        <span class="sq__box sq__rotate180">
-          <i class="sq__vcenter">{{mixins.icon('arrow-down')}}</i>
-        </span>
-      </button>
+      {% include "../partials/_bottom-out.html" %}
     </div>
     <!-- END content -->
+    {% include "../partials/_body-bottom.html" %}
 
+    
     <!-- BEGIN scripts -->
     <script src="//cdn.jsdelivr.net/blazy/latest/blazy.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>  

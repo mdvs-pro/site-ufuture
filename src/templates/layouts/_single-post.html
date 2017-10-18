@@ -7,20 +7,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#fff">
-    <link rel="icon" type="image/png" href="http://ufuture.com/favicon.png" sizes="32x32">it    
+    <link rel="icon" type="image/png" href="http://ufuture.com/favicon.png" sizes="32x32">  
     <meta name="format-detection" content="telephone=no">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400&amp;subset=cyrillic" rel="stylesheet">
     <link rel="stylesheet" media="all" href="css/app.css">
     {# {% include "../partials/_media-tags.html" %} #}
   </head>
   <body class="no-touch">
-      <div id="preloader">
-          <div class="blocks">
-            <span class="p-logo">{{mixins.icon('logo-small')}}</span>
-            <div></div>
-            <div></div>
-          </div>
-        </div>
+      {% include "../partials/_body-head.html" %}
     <!-- BEGIN content -->
     <div class="out {% if pageClass %}{{ pageClass }}{% else %}frontpage{% endif %}">
       {% include "../partials/_header.html" %}
@@ -37,13 +31,10 @@
       </div>
       {% block content %}{% endblock %}
       {% include "../partials/_footer.html" %}
-      <button id="scroll-up" class="no-btn sq">
-        <span class="sq__box sq__rotate180">
-          <i class="sq__vcenter">{{mixins.icon('arrow-down')}}</i>
-        </span>
-      </button>
+      {% include "../partials/_bottom-out.html" %}
     </div>
     <!-- END content -->
+    {% include "../partials/_body-bottom.html" %}
 
     <!-- BEGIN scripts -->
     <script src="//cdn.jsdelivr.net/blazy/latest/blazy.min.js"></script>
