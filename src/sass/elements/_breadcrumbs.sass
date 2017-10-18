@@ -1,2 +1,33 @@
 .breadcrumbs
-  
+  position: relative
+  font-size: 20px
+  line-height: 27px
+  font-family: $font_secondary
+  font-weight: 700
+  text-transform: uppercase
+  margin-bottom: 50px
+  &:before
+    content: ''
+    position: absolute
+    width: 3px
+    height: 0.84em
+    background: $color_secondary
+    display: inline-block
+    vertical-align: middle
+    left: -44px
+    top: 50%
+    transform: translateY(-50%)
+    margin-top: .1em
+    +r(767)
+      left: -24px
+  &__item
+    display: inline-block
+    vertical-align: bottom
+  &__item:first-child
+    font-size: 40px
+    line-height: 36px
+  &__divider
+    display: inline-block
+    vertical-align: bottom
+    color: $color_secondary
+    margin: 0 10px
