@@ -13,13 +13,3 @@ document.addEventListener("hashLinkClicked", function(e) {
   let el = document.querySelector('body');
   if (DomLib.hasClass(el, Menu.activeState)) DomLib.removeClass(el, Menu.activeState)
 });
-
-// setTimeout(function(){
-//   testBodyStatus();
-// }, 4000)
-
-// function testBodyStatus(){
-//   const LOADED_CLASS = 'loaded';
-//   let el = document.querySelector('.out');
-//   DomLib.triggerClass(el, LOADED_CLASS);
-// }

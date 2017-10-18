@@ -18,7 +18,7 @@ let Ufuture = {
     this.langSelect();
     this.searchBar();
     if (!this.isMobile()) {
-      this.newsAnimation();
+      this.uGallery();
     }
   },
   lazyLoadImages: function(){
@@ -91,20 +91,32 @@ let Ufuture = {
       }
     }
   },
-  newsAnimation: function(){
-    let animateNews = new TimelineMax();
-    animateNews.to(".news__odd", 0.4, {y: -70},0)
-     .to(".news__even", 0.2, {y: 70},0)
-     .from('.news__background', 0.3, {scale: 1.2},0)  
+  uGallery: function(){
+    // required: ScrollMagic and GSAP
+    let uGalleryClass = '.u-gallery';
+    if (!document.querySelectorAll(uGalleryClass).length) return;
 
     let controller = new ScrollMagic.Controller();
+    document.querySelectorAll(uGalleryClass).forEach(function(tweenItem){
+      let tweenGallery = new TimelineMax();
+      let galleryOdd = tweenItem.querySelector('.news__odd');
+      let galleryEven = tweenItem.querySelector('.news__even');
+      let galleryBgs = tweenItem.querySelectorAll('.news__background');
 
-    let scene = new ScrollMagic.Scene({
-      triggerElement: ".news__blocks", duration: 300,
-      triggerHook: 'onEnter', offset: 50
-    })
-    .setTween(animateNews)
-    .addTo(controller);
+      tweenGallery
+        .to(galleryOdd, 0.4, {y: -70},0)
+        .to(galleryEven, 0.2, {y: 70},0)
+        .from(galleryBgs, 0.3, {scale: 1.2},0);
+      
+      let scene = new ScrollMagic.Scene({
+        triggerElement: tweenItem, duration: 300,
+        triggerHook: 'onEnter', offset: 50
+      })
+        .setTween(tweenGallery)
+        .addTo(controller);
+
+    });
+
   }
 }
 
