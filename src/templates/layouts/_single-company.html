@@ -11,6 +11,8 @@
     <meta name="format-detection" content="telephone=no">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400&amp;subset=cyrillic" rel="stylesheet">
     <link rel="stylesheet" media="all" href="css/app.css">
+    <link rel="stylesheet" media="all" href="https://kfund-media.com/wp-content/uploads/2017/10/slick.css">
+    <link rel="stylesheet" media="all" href="https://kfund-media.com/wp-content/uploads/2017/10/slick-theme.css">
     {# {% include "../partials/_media-tags.html" %} #}
   </head>
   <body class="no-touch">
@@ -28,7 +30,7 @@
         <div class="container">
           <div class="container-inner">
             <div class="breadcrumbs">
-              <span class="breadcrumbs__item"><a class="breadcrumbs__link" href="/our-companies.html">Our companies</a></span>
+              <span class="breadcrumbs__item"><a class="breadcrumbs__link" href="/our-companies.html">Наші компанії</a></span>
               <span class="breadcrumbs__divider">&gt;</span>
               <span class="breadcrumbs__item">{% if title %}{{ title }}{% else %}Current page{% endif %}</span>
             </div>
@@ -36,7 +38,7 @@
         </div>
       </div>
       {% block content %}{% endblock %}
-      {% include "../partials/_news.html" %}
+     <!--  {% include "../partials/_news.html" %} -->
       {% include "../partials/_slider-companies.html" %}
       {% include "../partials/_footer.html" %}
       <button id="scroll-up" class="no-btn sq">
