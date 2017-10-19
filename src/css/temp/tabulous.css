@@ -1,0 +1,135 @@
+        /* Базовый контейнер табов */
+        
+        .tabs {
+            padding: 0px;
+            margin: 0 auto;
+        }
+        .content-title-contacts {
+	         font-size: 24px;
+	         font-weight: 500;
+	         padding: 30px 0px;
+	         display: block;
+    	}
+    	.razdelitel {
+    		       border-right: 2px solid #1bb4d0;
+				    text-decoration: none;
+				    display: inline-block;
+				    height: 18px;
+				    position: relative;
+				    width: 2px;
+				    padding-left: 22px;
+				    top: 3px;
+    	}
+    	.contacts a.link {
+		    font-weight: bold;
+		    color: #292929;
+		    text-decoration: none;
+		    padding-top: 20px;
+		    padding-bottom: 20px;
+		    padding-right: 20px;
+		    display: inline-block;
+		}
+		 .contacts a.link.left-padding {
+		 	padding-left: 20px;
+		}
+        /* Стили секций с содержанием */
+        
+        .tabs > section {
+            display: none;
+            padding: 15px 0px;
+           
+        }
+        
+        .tabs > section > p {
+            margin: 0 0 5px;
+            line-height: 1.5;
+            color: #383838;
+            /* прикрутим анимацию */
+            -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+            -webkit-animation-name: fadeIn;
+            animation-name: fadeIn;
+        }
+        /* Описываем анимацию свойства opacity */
+        
+        @-webkit-keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        
+        /* Прячем чекбоксы */
+        
+        .tabs > input {
+            display: none;
+            position: absolute;
+        }
+        /* Стили переключателей вкладок (табов) */
+        
+        .tabs > label {
+            display: inline-block;
+            padding: 10px 22px 0px 0px;
+            font-weight: 600;
+            text-align: left;
+            font-size: 20px;
+            color: #29262d;
+            font-family: ufuture-font, sans-serif;
+            
+        }
+      
+        /* Изменения стиля переключателей вкладок при наведении */
+        
+        .tabs > label:hover {
+            color: #888;
+            cursor: pointer;
+        }
+        /* Стили для активной вкладки */
+        
+        .tabs > input:checked + label {
+            color: #1db7d2;
+            
+        }
+        /* Активация секций с помощью псевдокласса :checked */
+        
+        #tab1:checked ~ #content-tab1,
+        #tab2:checked ~ #content-tab2,
+        #tab3:checked ~ #content-tab3,
+        #tab4:checked ~ #content-tab4 {
+            display: block;
+        }
+        /* Убираем текст с переключателей 
+* и оставляем иконки на малых экранах
+*/
+        
+
+        /* Изменяем внутренние отступы 
+*  переключателей для малых экранов
+*/
+        
+        @media screen and (max-width: 400px) {
+             .contacts a.link {		   
+			    padding-top: 0px;
+			    padding-bottom: 0px;
+			    padding-right: 0px;
+			}
+			.content-title-contacts {
+	         padding: 10px 0px;
+	        }
+	       	 .contacts a.link.left-padding {
+		 	padding-left: 0px;
+		}
+        }
