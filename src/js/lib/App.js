@@ -14,6 +14,7 @@ let Ufuture = {
     this.scrollUp();
     this.langSelect();
     this.searchBar();
+    this.uModal.init();
     if (!this.isMobile()) {
       this.uGallery();
     }
@@ -196,6 +197,40 @@ let Ufuture = {
         el.classList.remove(ACTIVE_CLASS);
       }
     });
+  },
+  uModal: {
+    el: '.js-u-modal',
+    triggerClass: '.u-modal-link',
+    ACTIVE_CLASS: 'modal-open',
+    tl: '',
+    init: function(){
+      let triggers = document.querySelectorAll(this.triggerClass);
+      this.tl = new TimelineMax();
+      
+      Array.from(triggers).forEach(link => {
+        link.addEventListener('click', (event) => {
+          event.preventDefault();
+          this.open();
+        });
+      });
+
+    },
+    open: function(){
+      this.tl
+        .to(this.el, 0.4, {scale:1})
+        .fromTo('.u-modal__bg', 1, {
+          x:- (window.innerWidth+300),
+          transformOrigin: 'center center',
+          skewType: "simple",
+          skewX: 30
+        },{
+          x:0,
+          skewX:0
+        })
+        .call(()=>{
+          console.log(this.ACTIVE_CLASS);
+        })
+    }
   }
 }
 
