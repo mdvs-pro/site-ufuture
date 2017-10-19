@@ -1,0 +1,15 @@
+/* google maps style */ 
+ .map-section {
+ height: 400px;
+ width: 100%;
+ background-color: grey;
+ margin-top: 20px
+}
+section#contacts {
+    padding-bottom: 35px;
+}
+ #map {
+ height: 400px;
+ width: 100%;
+  background-color: grey;
+}
