@@ -277,7 +277,11 @@ let Ufuture = {
           document.querySelector('.u-modal__inner').appendChild(iframe);
           break;
         case 'image' : 
-          alert('IMAGE');
+          let img = document.createElement('img');
+          img.src = src;
+          // iframe.setAttribute("width", document.querySelector(this.containerClass).offsetWidth); 
+          // iframe.setAttribute("height", document.querySelector(this.containerClass).offsetHeight); 
+          document.querySelector('.u-modal__inner').appendChild(img);
         default: break;
       }
 
