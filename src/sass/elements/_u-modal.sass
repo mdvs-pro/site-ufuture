@@ -1,2 +1,90 @@
 .u-modal
-  
+  position: fixed
+  top: 0
+  left: 0
+  width: 100vw
+  height: 100vh
+  z-index: 50
+  padding: 5%
+  background: $color_white
+  transform: scale(0)
+  +r(1400)
+    padding: 50px
+  +r(991)
+    padding: 40px 30px
+  &__container
+    position: relative
+    height: 100%
+    overflow: hidden
+    z-index: 2
+  &__bg
+    position: absolute
+    top: 0
+    left: 0
+    background: $color_secondary
+    width: 100%
+    height: 100%
+  &__content
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    z-index: 2
+    display: flex
+    align-items: center
+    justify-content: center
+  .modal-open &__content
+    opacity: 1
+  &__inner
+    position: relative
+    flex: 1
+    height: 100%
+    img
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+      max-width: 100%
+      max-height: 100%
+  &__controllers
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    z-index: 1
+  &__close
+    position: absolute
+    top: 0
+    right: 0
+    margin: 10px 10px 0 0
+    text-align: center
+    color: $color_t
+    cursor: pointer
+    transform: translateZ(0) scale(0)
+    transition: transform .3s
+    &:hover
+      color: $color_secondary
+    &:hover .u-modal__close-i
+      &:before, &:after
+        background: $color_secondary!important
+      &:before
+        transform: rotate(-37deg)
+      &:after
+        transform: rotate(37deg)
+  .modal-open &__close
+    transform: translateZ(0) scale(1)
+  &__close-t
+    display: block
+    font-family: 'ufuture-font'
+    font-weight: 700
+    line-height: 0.6
+    font-size: 14px
+    color: inherit
+    transition: color .3s
+    transition-timing-function: cubic-bezier(0.7,0,0.3,1)
+  &__loader
+    top: 50%
+    left: 50%
+    transform: translate(-50%,-50%)

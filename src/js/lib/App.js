@@ -14,6 +14,7 @@ let Ufuture = {
     this.scrollUp();
     this.langSelect();
     this.searchBar();
+    this.uModal.init();
     if (!this.isMobile()) {
       this.uGallery();
     }
@@ -196,6 +197,95 @@ let Ufuture = {
         el.classList.remove(ACTIVE_CLASS);
       }
     });
+  },
+  uModal: {
+    el: '.js-u-modal',
+    triggerClass: '.u-modal-link',
+    containerClass: '.u-modal__container',
+    ACTIVE_CLASS: 'modal-open',
+    closeLink: '.u-modal__close',
+    tl: '',
+    clickedEl: '',
+    init: function(){
+      let triggers = document.querySelectorAll(this.triggerClass);
+      this.tl = new TimelineMax();
+      
+      Array.from(triggers).forEach(link => {
+        link.addEventListener('click', (event) => {
+          this.clickedEl = event.target;
+          event.preventDefault();
+          this.open();
+        });
+      });
+
+      document.querySelector(this.closeLink).addEventListener('click', (event) => {
+        this.close();
+      });
+
+      document.onkeydown = (event) => {
+        event = event || window.event;
+        let isEscape = false;
+        let isModalOpened = document.querySelector(this.el).classList.contains(this.ACTIVE_CLASS);
+        
+        if ("key" in event) {
+            isEscape = (event.key == "Escape" || event.key == "Esc");
+        } else {
+            isEscape = (event.keyCode == 27);
+        }
+        if (isEscape && isModalOpened) {
+          this.close();
+        }
+      };
+
+    },
+    open: function(){
+      this.tl
+        .to(this.el, 0.4, {scale:1})
+        .fromTo('.u-modal__bg', 1, {
+          x:- (window.innerWidth+300),
+          transformOrigin: 'center center',
+          skewType: "simple",
+          skewX: 30
+        },{
+          x:0,
+          skewX:0
+        })
+        .fromTo('.u-modal__loader', 0.3, {opacity:0}, {opacity:1})
+        .call(()=>{
+          document.querySelector(this.el).classList.add(this.ACTIVE_CLASS);
+          this.loadLinkSrc()
+        });
+    },
+    close: function(){
+      this.tl
+        .call(()=>{
+          document.querySelector(this.el).classList.remove(this.ACTIVE_CLASS);
+          document.querySelector('.u-modal__inner').innerHTML = "";
+        })
+        .to(this.el, 0.4, {scale:0})
+    },
+    loadLinkSrc: function(){
+      let type = this.clickedEl.dataset.modalType;
+      let src = this.clickedEl.dataset.modalSrc;
+
+      switch (type){
+        case 'video' : 
+          let iframe = document.createElement('iframe');
+          iframe.src = src;
+          iframe.setAttribute("width", document.querySelector(this.containerClass).offsetWidth); 
+          iframe.setAttribute("height", document.querySelector(this.containerClass).offsetHeight); 
+          document.querySelector('.u-modal__inner').appendChild(iframe);
+          break;
+        case 'image' : 
+          let img = document.createElement('img');
+          img.src = src;
+          // iframe.setAttribute("width", document.querySelector(this.containerClass).offsetWidth); 
+          // iframe.setAttribute("height", document.querySelector(this.containerClass).offsetHeight); 
+          document.querySelector('.u-modal__inner').appendChild(img);
+        default: break;
+      }
+
+    }
   }
 }
 

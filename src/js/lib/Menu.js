@@ -1,7 +1,7 @@
 const Menu = {
   navClass: '.js-nav',
   navMobileClass: '.js-m-nav',
-  activeState: 'modal-open',
+  activeState: 'menu-open',
   init: function(){
     this.cloneMenu();
     this.handlersInit();
