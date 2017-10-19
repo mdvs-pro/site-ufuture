@@ -4,14 +4,11 @@ let Ufuture = {
   },
   initBody: function(){
     window.onload = function() {
-      document.querySelector('html').classList.add('fadein');
-      document.querySelector('#preloader').classList.add('fadeout');
-      setTimeout(function() {
-        document.querySelector('#preloader').classList.add('hide');
-      }, 800);
+      document.querySelector('html').classList.add('loaded');
     };
   },
   init: function() {
+    this.fixedHeader();
     this.lazyLoadImages();
     this.smoothHashLinks();
     this.scrollUp();
@@ -75,25 +72,54 @@ let Ufuture = {
     });
   },
   scrollUp: function(){
+    let el = document.getElementById('scroll-up');
+    if (el === null) return;
+
     let scrolled;
+    let offset = 400;
     const ACTIVE_CLASS = 'show';
 
-    document.getElementById('scroll-up').addEventListener("click", function(){
+    // frontpage fix
+    if (document.querySelector('.out').classList.contains('frontpage')) {
+      let uFollow = document.querySelector('.u-follow');
+      offset = this.getOffset(uFollow).top + uFollow.offsetHeight - window.innerHeight + 90; // 90 is scroll-top height + bottom
+    }
+
+    // scroll to top
+    el.addEventListener("click", function(){
       window.scroll({ top: 0, left: 0, behavior: 'smooth' });
     });
     
-    window.onscroll = function() {
+    // show/hide
+    window.addEventListener('scroll',function() {
       scrolled = window.pageYOffset || document.documentElement.scrollTop;
-      if (scrolled > 400) {
-        document.getElementById('scroll-up').classList.add(ACTIVE_CLASS);
+      if (scrolled > offset) {
+        el.classList.add(ACTIVE_CLASS);
       } else {
-        document.getElementById('scroll-up').classList.remove(ACTIVE_CLASS);
+        el.classList.remove(ACTIVE_CLASS);
       }
-    }
+    });
   },
   uGallery: function(){
     // required: ScrollMagic and GSAP
     let uGalleryClass = '.u-gallery';
+    let options = {
+      left: {
+        begin: 0,
+        end: -30,
+        duration: 1
+      },
+      right: {
+        begin: -30,
+        end: 30,
+        duration: 1
+      },
+      bg: { //zoom
+        begin: 1.2,
+        end: 1
+      }
+    }
+
     if (!document.querySelectorAll(uGalleryClass).length) return;
 
     let controller = new ScrollMagic.Controller();
@@ -104,12 +130,14 @@ let Ufuture = {
       let galleryBgs = tweenItem.querySelectorAll('.news__background');
 
       tweenGallery
-        .to(galleryOdd, 0.4, {y: -70},0)
-        .to(galleryEven, 0.2, {y: 70},0)
-        .from(galleryBgs, 0.3, {scale: 1.2},0);
+        .fromTo(galleryOdd, options.left.duration, {y: options.left.begin, ease:Linear.easeNone},{y: options.left.end, ease:Linear.easeNone})
+        .fromTo(galleryEven, options.right.duration, {y: options.right.begin, ease:Linear.easeNone},{y: options.right.end, ease:Linear.easeNone});
+        // .fromTo(galleryBgs, .3, {scale: options.bg.begin},{scale: options.bg.end});
       
+      let duration = 600;
+
       let scene = new ScrollMagic.Scene({
-        triggerElement: tweenItem, duration: 300,
+        triggerElement: tweenItem, duration: duration,
         triggerHook: 'onEnter', offset: 50
       })
         .setTween(tweenGallery)
@@ -117,6 +145,57 @@ let Ufuture = {
 
     });
 
+  },
+  getOffset: function(el){
+    if (el.getBoundingClientRect) {
+      return getOffsetRect(el)
+    } else {
+      return getOffsetSum(el)
+    }
+
+    function getOffsetSum(el) {
+      let top = 0;
+      let left = 0;
+
+      while(el) {
+          top = top + parseInt(el.offsetTop);
+          left = left + parseInt(el.offsetLeft);
+          el = el.offsetParent;
+      }
+  
+      return {top: top, left: left};
+    }
+  
+    function getOffsetRect(el) {
+      let box = el.getBoundingClientRect();
+      let body = document.body;
+      let docElem = document.documentElement;
+
+      let scrollTop = window.pageYOffset || docElem.scrollTop || body.scrollTop
+      let scrollLeft = window.pageXOffset || docElem.scrollLeft || body.scrollLeft
+  
+      let clientTop = docElem.clientTop || body.clientTop || 0
+      let clientLeft = docElem.clientLeft || body.clientLeft || 0
+  
+      let top  = box.top +  scrollTop - clientTop
+      let left = box.left + scrollLeft - clientLeft
+  
+      return { top: Math.round(top), left: Math.round(left) }
+    }
+  },
+  fixedHeader:function(){
+    let scrolled;
+    let el = document.querySelector('.header');
+    const ACTIVE_CLASS = 'moved';
+
+    window.addEventListener('scroll',function() {
+      scrolled = window.pageYOffset || document.documentElement.scrollTop;
+      if (scrolled > 40) {
+        el.classList.add(ACTIVE_CLASS);
+      } else {
+        el.classList.remove(ACTIVE_CLASS);
+      }
+    });
   }
 }
 

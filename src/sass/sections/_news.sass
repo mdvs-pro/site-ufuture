@@ -4,13 +4,10 @@
     background: $color_light-gray
     margin-top: -60px
   z-index: 1
-  .post__text
-    transform: translateX(-100%)
-    transition: all .3s
-    transition-delay: .1s
-  .post__title
-    transform: translateX(-100%)
-    transition: all .3s
+  .post__text, .post__title
+    transform: translateX(-15px);
+    opacity: 0;
+    transition: transform 600ms cubic-bezier(0.215,.61,.355,1),-webkit-transform 600ms cubic-bezier(0.215,.61,.355,1),opacity 650ms cubic-bezier(0.215,.61,.355,1)
     transition-delay: .2s
   &__blocks
     position: relative
@@ -27,6 +24,7 @@
       .news__content
         opacity: 1
       .post__text, .post__title
+        opacity: 1
         transform: translateX(0)
   &__content
     position: relative

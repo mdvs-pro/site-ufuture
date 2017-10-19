@@ -41,9 +41,16 @@ blockquote, .blockquote
 	font-size: 20px
 	font-weight: 400
 	line-height: 1.55
-	border-left: 3px solid $color_secondary
 	padding-left: 45px
 	margin-bottom: 90px
+	&:before
+		content: ''
+		width: 3px
+		height: 100%
+		background: $color_secondary
+		position: absolute
+		top: 0
+		left: 0
 	.page__content &
 		margin-bottom: 100px
 	+rmin(1400)
@@ -102,13 +109,6 @@ h3, .h3
 .i-prop
 	font-style: normal
 	font-weight: normal
-
-.out
-	opacity: 0
-	transition: opacity .8s linear
-	transition-delay: .6s
-	.fadein &
-		opacity: 1
 
 .special
 	.page__content > *
