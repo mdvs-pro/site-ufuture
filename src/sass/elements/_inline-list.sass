@@ -3,7 +3,9 @@
   font-weight: 400
   &__item
     display: inline-block
-    &:after
+    +r(767)
+        display: block
+    &:before, &:after
       content: ''
       position: relative
       width: 3px
@@ -14,6 +16,14 @@
       margin:  0px 25px 0px
     &:last-child:after
       display: none
+    +rmin(768)
+      &:before
+        display: none
+    +r(767)
+      &:before
+        margin-left: 0
+      &:after
+        display: none
   &__link
     display: inline-block
     vertical-align: middle

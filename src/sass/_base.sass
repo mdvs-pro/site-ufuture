@@ -119,20 +119,21 @@ h3, .h3
 	font-weight: normal
 
 .special
-	.page__content > *
-		margin-left: 16.66667%
-		margin-right: 16.66667%
-	.page__content blockquote
-		margin-left: 0
-		margin-right: 0
-	.page__content .full-img
-		margin-left: 0
-		margin-right: 0
-	.page__content .full-video
-		margin-left: 0
-		margin-right: 0
-	.page__article
-		padding: 20px 0
+	+rmin(992)
+		.page__content > *
+			margin-left: 16.66667%
+			margin-right: 16.66667%
+		.page__content blockquote
+			margin-left: 0
+			margin-right: 0
+		.page__content .full-img
+			margin-left: 0
+			margin-right: 0
+		.page__content .full-video
+			margin-left: 0
+			margin-right: 0
+		.page__article
+			padding: 20px 0
 
 .page__content
 	padding-top: 30px
