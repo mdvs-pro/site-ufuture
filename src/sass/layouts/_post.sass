@@ -43,7 +43,15 @@
 
 .sidebar 
   .post
+    position: relative
     background: $color_secondary
+    margin-bottom: 0
+    &__image-front
+      position: absolute
+      font-size: 0
+      top: 0
+      left: 0
+      height: 100%
     &__heading
       color: $color_t
     .link
@@ -51,7 +59,14 @@
       +hover
         color: $color_white
     &__content
-      padding: 5px 25px 40px
+      position: relative
+      padding: 20px
+      background: $color_secondary
+      height: 200px
+      transition: opacity .3s
+      opacity: 0
+    &:hover .post__content
+      opacity: 1
     &__date
       font-size: 14px
       line-height: 1.2
@@ -65,3 +80,6 @@
       margin-left: 4px
       padding-left: 7px
       text-transform: none
+    &__image-back
+      height: 100%
+      object-fit: cover
