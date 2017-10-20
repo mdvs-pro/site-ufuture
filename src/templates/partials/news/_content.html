@@ -2,8 +2,8 @@
   <div class="container">
     <div class="container-inner">
       <header>
-        <h1 class="sc__heading">Новини</h1>
-        <ul class="inline-list">
+        <h1 class="sc__heading sc__heading--pb20">Новини</h1>
+        <ul class="inline-list sc__top-links">
           <li class="inline-list__item">
             <a href="/our-companies.html" class="inline-list__link">Наші компанії</a>
           </li>
@@ -15,7 +15,7 @@
       <div class="post-list">
         <article class="post post--big-image">
           <div class="post__image-front">
-            <a href="/single-news-001.html" class="link">
+            <a href="/single-news-001.html">
               <img class="img-responsive b-lazy post__image-back" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
                 data-src="img/Khmelnytsky-cover.jpg" alt="news-image">
             </a>
@@ -41,7 +41,7 @@
         </article>
         <article class="post post--left">
           <div class="post__image-front">
-            <a href="/single-news-001.html" class="link">
+            <a href="/single-news-001.html">
               <img class="img-responsive b-lazy post__image-back" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
                 data-src="img/Khmelnytsky-cover.jpg" alt="news-image">
             </a>
@@ -67,7 +67,7 @@
         </article>
         <article class="post post--left">
           <div class="post__image-front">
-            <a href="/single-news-001.html" class="link">
+            <a href="/single-news-001.html">
               <img class="img-responsive b-lazy post__image-back" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
                 data-src="img/Khmelnytsky-cover.jpg" alt="news-image">
             </a>
@@ -93,7 +93,7 @@
         </article>
         <article class="post post--left">
           <div class="post__image-front">
-            <a href="/single-news-001.html" class="link">
+            <a href="/single-news-001.html">
               <img class="img-responsive b-lazy post__image-back" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
                 data-src="img/Khmelnytsky-cover.jpg" alt="news-image">
             </a>
@@ -119,7 +119,7 @@
         </article>
         <article class="post post--left">
           <div class="post__image-front">
-            <a href="/single-news-001.html" class="link">
+            <a href="/single-news-001.html">
               <img class="img-responsive b-lazy post__image-back" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
                 data-src="img/Khmelnytsky-cover.jpg" alt="news-image">
             </a>
@@ -145,7 +145,7 @@
         </article>
         <article class="post post--left">
           <div class="post__image-front">
-            <a href="/single-news-001.html" class="link">
+            <a href="/single-news-001.html">
               <img class="img-responsive b-lazy post__image-back" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
                 data-src="img/Khmelnytsky-cover.jpg" alt="news-image">
             </a>
@@ -172,22 +172,34 @@
       </div>
       <div class="page-nav">
         <span class="page-nav__nlink">
-          <a href="#">
-            {{mixins.icon('facebook')}}
-          </a>
+          <button class="no-btn sq" type="button">
+            <span class="sq__box sq__rotate90">
+              <i class="sq__vcenter">{{mixins.icon('arrow-down')}}</i>
+            </span>
+          </button>
         </span>
         <ul class="page-nav__list">
           <li class="page-nav__item">
-            <a href="#" class="page-nav__link">1</a>
+            <a href="#" class="sq page-nav__link" target="_blank">
+              <span class="sq__box">
+                <i class="sq__vcenter page-nav__num">1</i>
+              </span>
+            </a>
           </li>
           <li class="page-nav__item">
-            <a href="#" class="page-nav__link">2</a>
+            <a href="#" class="sq page-nav__link" target="_blank">
+              <span class="sq__box">
+                <i class="sq__vcenter page-nav__num">2</i>
+              </span>
+            </a>
           </li>
         </ul>
         <span class="page-nav__nlink">
-          <a href="#">
-            {{mixins.icon('facebook')}}
-          </a>
+          <button class="no-btn sq" type="button">
+            <span class="sq__box sq__rotate90m">
+              <i class="sq__vcenter">{{mixins.icon('arrow-down')}}</i>
+            </span>
+          </button>
         </span>
       </div>
     </div>

@@ -9,12 +9,21 @@ category: Наші компанії
 {% block content %}
   <main class="page__article sc">
     <div class="container">
+      <span class="position-top">
+        {% include "partials/_follow.html" %}
+      </span>
       <div class="container-inner">
         <div class="row">
           <article class="post col-2-3_md">
+              <div class="breadcrumbs">
+                <h1 class="breadcrumbs__item">Новини</h1>
+                <span class="breadcrumbs__divider">&gt;</span>
+                <span class="breadcrumbs__item">{% if category %}{{ category }}{% else %}Our companies{% endif %}</span>
+              </div>
             {% include "partials/single-post/_post-001.html" %} 
           </article>
           <aside class="sidebar col-1-3_md">
+            <h2 class="news__aside-h">Latest News</h2>
             {% include "partials/single-post/_sidebar.html" %} 
           </aside>
         </div>

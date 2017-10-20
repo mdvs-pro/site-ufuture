@@ -10,15 +10,25 @@
     font-size: 14px
     line-height: 1.2
     padding-bottom: 15px
+  &__date
+      font-size: 16px
+      line-height: 36px
+  &__category
+    font-weight: bold
+    text-transform: uppercase
+    text-decoration: none
+    color: $color_secondary
 
 .post--left
-  display: flex
-  .post__image
-    flex: 0 0 $grid_7_12
-    max-width: $grid_7_12
-  .post__content
-    flex: 0 0 $grid_5_12
-    max-width: $grid_5_12
+  +rmin(992)
+    display: flex
+    .post__image
+      flex: 0 0 $grid_7_12
+      max-width: $grid_7_12
+    .post__content
+      flex: 0 0 $grid_5_12
+      max-width: $grid_5_12
+
 
 .post--single
   .post__content
@@ -31,13 +41,27 @@
     font-size: 16px
     margin-bottom: 20px
 
-.sidebar .post
-  background: $color_secondary
-  .post__heading
-    color: $color_t
-  .link
-    color: $color_t
-    +hover
-      color: $color_white
-  .post__content
-    padding: 5px 30px 40px
+.sidebar 
+  .post
+    background: $color_secondary
+    &__heading
+      color: $color_t
+    .link
+      color: $color_t
+      +hover
+        color: $color_white
+    &__content
+      padding: 5px 25px 40px
+    &__date
+      font-size: 14px
+      line-height: 1.2
+    &__category
+      font-family: $font_primary
+      font-size: 14px
+      line-height: 1.2
+      font-weight: 400
+      color: $color_t
+      border-left: 1px solid
+      margin-left: 4px
+      padding-left: 7px
+      text-transform: none

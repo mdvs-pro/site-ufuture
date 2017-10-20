@@ -1,5 +1,7 @@
 .sc
   padding: $section_pad 0
+  &__top-links
+    margin-bottom: 40px
   &__heading
     position: relative
     padding: $heading_pad 0
@@ -20,11 +22,13 @@
         left: -24px
     &--bwhite:before
       background: #ffffff
+    &--pb20
+      padding-bottom: 20px
+      &:before
+        margin-top: 20px
   &.bg-gradient
     position: relative
-    background: $color_gray
-    
-        
+    background: $color_gray     
     $height_block: 450px
     background: -moz-linear-gradient(top, $color_white $height_block, $color_gray $height_block, $color_gray 100%)
     background: -webkit-linear-gradient(top, $color_white $height_block,$color_gray $height_block,$color_gray 100%)

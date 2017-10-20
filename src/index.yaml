@@ -1,11 +1,17 @@
 ProjectTitle: UFuture
 
 PageList:
-- file: front-page.html
-  ready: 75
+- file: index.html
+  ready: 90
 - file: founder.html
   ready: 70
 - file: news.html
+  ready: 70
+- file: media.html
+  ready: 70
+- file: social-projects.html
+  ready: 70
+- file: contacts.html
   ready: 70
 - file: single-news-001.html
   ready: 70
