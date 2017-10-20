@@ -17,6 +17,8 @@ PageList:
   ready: 70
 - file: our-companies.html
   ready: 70
+- file: photo-lviv.html
+  ready: 20
 - file: single-company-lviv.html
   ready: 20
 - file: single-company-airport.html

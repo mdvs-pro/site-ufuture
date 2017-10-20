@@ -119,6 +119,11 @@
   display: flex
   flex-wrap: wrap
   margin: 0 -15px
+  &--photo
+    .grid__col
+      flex: 0 0 $grid_1_2
+      flex-basis: $grid_1_2
+      max-width: $grid_1_2
   &__col
     position: relative
     flex: 0 0 $grid_1_3
@@ -154,17 +159,17 @@
   +hover
     color: red
 
-    /* our company */
-  .company-style 
-    text-align: center
-    display: block
-    font-weight: 400
-    padding: 0px 20px 20px
-    font-family: "Open Sans",sans-serif
-    line-height: 20px
-    font-size: 15px
-    max-height: 62px
-    height: 62px
+/* our company */
+.company-style 
+  text-align: center
+  display: block
+  font-weight: 400
+  padding: 0px 20px 20px
+  font-family: "Open Sans",sans-serif
+  line-height: 20px
+  font-size: 15px
+  max-height: 62px
+  height: 62px
 
 /* video style */ 
 .single__video 
