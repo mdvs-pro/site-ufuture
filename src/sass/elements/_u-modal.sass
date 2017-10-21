@@ -9,9 +9,9 @@
   background: $color_white
   transform: scale(0)
   +r(1400)
-    padding: 50px
+    padding: 70px
   +r(991)
-    padding: 40px 30px
+     padding: 70px 50px
   &__container
     position: relative
     height: 100%
@@ -58,12 +58,14 @@
     position: absolute
     top: 0
     right: 0
-    margin: 10px 10px 0 0
+    margin: 10px 25px 0 0
     text-align: center
     color: $color_t
     cursor: pointer
     transform: translateZ(0) scale(0)
     transition: transform .3s
+    +r(991)
+     margin: 10px 15px 0 0
     &:hover
       color: $color_secondary
     &:hover .u-modal__close-i
