@@ -1,5 +1,6 @@
 .post-list
   .post
+    background: $color_white
     &__image-front
       font-size: 0
     &__image-back
@@ -12,17 +13,9 @@
         font-size: 20px
         line-height: 20px      
         color: $color_t
-    &.post--big-image .post__heading
-      margin-bottom: 0px
-      .link
-        font-size: 30px
-        line-height: 32px      
-        color: $color_t
     &__content
-      padding: 5px 28px 30px
-    &.post--big-image .post__date
-      font-size: 16px
-      line-height: 36px
+      position: relative
+      padding: 25px 30px
     &__category
       font-weight: bold
       text-transform: uppercase
@@ -31,10 +24,30 @@
     &__text
       font-size: 15px
       line-height: 24px
+      margin-bottom: 55px
+    &__date
+      +r(991)
+        font-size: 14px
+        display: block
+    &__more
+      position: absolute
+      bottom: 25px
+      left: 30px
+      width: 100%
     .read-more
       font-size: 18px
       line-height: 27px
-
+  .post--big-image
+    +rmin(992)
+      .post__heading
+        margin-bottom: 0px
+        .link
+          font-size: 30px
+          line-height: 32px      
+          color: $color_t
+      .post__date
+        font-size: 16px
+        line-height: 36px
 .page-nav
   display: flex
   align-items: center
