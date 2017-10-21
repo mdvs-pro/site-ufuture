@@ -9,7 +9,14 @@
   &__container
     position: relative
   .u-follow
-    position: absolute
-    top: 60px
-    right: 0px
-
+      position: absolute
+      top: 60px
+      right: 0px
+      +r(575)
+          right:  40px
+  .home--page
+    +r(575)
+        padding-right: 50px
+        font-size: 18px
+    +rmin(576)
+        font-size: 21px
