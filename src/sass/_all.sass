@@ -1,6 +1,5 @@
 .icon-logo
-	fill: $color_logo
-	width: 180px
+	width: 170px
 	height: 74px
 	+r(1700)
 		width: 175px
@@ -105,3 +104,36 @@
 		padding: 15px 0 8px
 		color: #525252
 		font-size: 16px
+
+.position-top
+	#about--follow 
+		position: absolute
+		right: 0
+		top: 60px
+		+r(991)
+			display: none
+
+.news__content 
+    	h3, h4, a.read-more, p
+    		color: $color_paragraph
+    
+.close-icon
+	position: relative
+	display: inline-block
+	width: 35px
+	height: 35px
+	overflow: hidden
+	&:before, &:after
+		content: ''
+		position: absolute
+		width: 100%
+		height: 2px
+		top: 50%
+		left: 0
+		margin-top: -1px
+		background: $color_t
+		transform: rotate(-45deg)
+		transition: all .3s
+    transition-timing-function: cubic-bezier(0.7,0,0.3,1)
+	&:after
+		transform: rotate(45deg)

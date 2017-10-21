@@ -7,8 +7,6 @@
   .post__text, .post__title
     transform: translateX(-15px);
     opacity: 0;
-    transition: transform 600ms cubic-bezier(0.215,.61,.355,1),-webkit-transform 600ms cubic-bezier(0.215,.61,.355,1),opacity 650ms cubic-bezier(0.215,.61,.355,1)
-    transition-delay: .2s
   &__blocks
     position: relative
     z-index: 1
@@ -51,3 +49,11 @@
     z-index: 0
   &__footer
     // margin-top: 120px
+  &__aside-h
+    @extend .breadcrumbs
+    margin-top: 9px
+    &:before
+      display: none
+
+.news__footer
+    padding-top: 20px

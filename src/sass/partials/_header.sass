@@ -8,7 +8,7 @@
   transition: box-shadow .3s
   box-shadow: 0px 1px 1px 0px rgba(0,0,0,0)
   &.moved
-    box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.46)
+    box-shadow: 0px 1.4px 2px 0px rgba(0,0,0,0.1)
   & + .sc
     padding-top: $header_height + px
   & + .page-top
@@ -91,7 +91,7 @@
     overflow: scroll
     visibility: hidden
     transition: visibility 0s linear 0.5s
-  .modal-open &__modal
+  .menu-open &__modal
     +r(991)
       visibility: visible
       transition-delay: 0s
@@ -105,7 +105,7 @@
     transform: translate3d(0,-150%,0) skewY(-10deg)
     transition: transform .9s cubic-bezier(.19,1,.22,1), -webkit-transform .9s cubic-bezier(.19,1,.22,1)
     transition-delay: 0.3s
-  .modal-open &__modal-bg
+  .menu-open &__modal-bg
     +r(991)
       transform: translate3d(0,0,0) skewY(0);
       transition-delay: 0s

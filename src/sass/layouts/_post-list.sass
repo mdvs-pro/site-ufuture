@@ -1,2 +1,59 @@
 .post-list
-  
+  .post
+    &__image-front
+      font-size: 0
+    &__image-back
+      height: 100%
+      width: 100%
+      object-fit: cover
+    &__heading
+      margin-bottom: 15px
+      .link
+        font-size: 20px
+        line-height: 20px      
+        color: $color_t
+    &.post--big-image .post__heading
+      margin-bottom: 0px
+      .link
+        font-size: 30px
+        line-height: 32px      
+        color: $color_t
+    &__content
+      padding: 5px 28px 30px
+    &.post--big-image .post__date
+      font-size: 16px
+      line-height: 36px
+    &__category
+      font-weight: bold
+      text-transform: uppercase
+      text-decoration: none
+      color: $color_secondary
+    &__text
+      font-size: 15px
+      line-height: 24px
+    .read-more
+      font-size: 18px
+      line-height: 27px
+
+.page-nav
+  display: flex
+  align-items: center
+  justify-content: center
+  margin-top: 90px
+  &__list
+    display: flex
+    align-items: center
+    justify-content: center
+    margin: 0 40px
+  &__link
+    color: $color_t
+  &__num
+    font-size: 15px
+    font-style: normal
+  .sq__box
+    border-left-width: 1px
+    border-right-width: 1px
+  .page-nav__item:first-child .sq__box
+    border-left-width: 2px
+  .page-nav__item:last-child .sq__box
+    border-right-width: 2px
