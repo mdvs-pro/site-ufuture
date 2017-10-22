@@ -1,9 +1,11 @@
 let Ufuture = {
+  touchEvent: 'click',
   isMobile: function(){
     return this.getScreenSize().width < 992;
   },
   initBody: function(){
-    window.onload = function() {
+    window.onload = () => {
+      this.touchEvent = 'ontouchstart' in window ? 'touchstart' : 'click';
       document.querySelector('html').classList.add('loaded');
     };
   },
@@ -28,10 +30,10 @@ let Ufuture = {
     let elBtn = document.querySelector('.js-search-btn'); 
     let elReset = document.querySelector('.js-search-reset'); 
 
-    elBtn.addEventListener('click', function(){
+    elBtn.addEventListener(this.touchEvent, function(){
       document.querySelector('body').classList.add('search-opened');
     });
-    elReset.addEventListener('click', function(){
+    elReset.addEventListener(this.touchEvent, function(){
       document.querySelector('body').classList.remove('search-opened');
     });
   },
@@ -40,7 +42,7 @@ let Ufuture = {
     let elBtn = document.querySelector('.lang__btn'); 
     let el = document.querySelector(className);
 
-    elBtn.addEventListener('click', function(){
+    elBtn.addEventListener(this.touchEvent, function(){
      el.classList.toggle('active');
     });
   },
@@ -63,8 +65,8 @@ let Ufuture = {
       let linkHref = link.getAttribute('href');
       return linkHref.length > 1 && linkHref[0] === '#';
     });
-    linksArray.forEach(function(link){
-      link.addEventListener('click', function(e){
+    linksArray.forEach((link) => {
+      link.addEventListener(this.touchEvent, function(e){
         e.preventDefault();
         let linkTarget = document.querySelector(link.getAttribute('href'));
         link.dispatchEvent(event);
@@ -211,14 +213,14 @@ let Ufuture = {
       this.tl = new TimelineMax();
       
       Array.from(triggers).forEach(link => {
-        link.addEventListener('click', (event) => {
+        link.addEventListener(this.touchEvent, (event) => {
           this.clickedEl = event.target;
           event.preventDefault();
           this.open();
         });
       });
 
-      document.querySelector(this.closeLink).addEventListener('click', (event) => {
+      document.querySelector(this.closeLink).addEventListener(this.touchEvent, (event) => {
         this.close();
       });
 
