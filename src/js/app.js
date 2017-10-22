@@ -5,9 +5,7 @@ import {smooth} from './lib/smoothscroll.min.js';
 import App from './lib/App.js';
 
 App.initBody();
-
 Menu.init();
-App.init();
 
 document.addEventListener("hashLinkClicked", function(e) {
   let el = document.querySelector('body');
