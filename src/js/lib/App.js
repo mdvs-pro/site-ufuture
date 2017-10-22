@@ -1,3 +1,5 @@
+//import AppHelper from '../lib/App-helper.js';
+
 var touchEvent = 'click';
 
 let Ufuture = {
@@ -12,6 +14,11 @@ let Ufuture = {
     };
   },
   init: function() {
+    if (Modernizr.touchevents) {
+      this.postTouch('.news__item');
+      this.postTouch('.post--hover');
+    }
+
     this.fixedHeader();
     this.lazyLoadImages();
     this.smoothHashLinks();
@@ -22,6 +29,26 @@ let Ufuture = {
     if (!this.isMobile()) {
       this.uGallery();
     }
+  },
+  postTouch: function(elClass){
+    let newsArray = document.querySelectorAll(elClass);
+    let activeElement = null;
+    newsArray = Array.from(newsArray);
+    if (!newsArray.length) return;
+
+    newsArray.forEach(function(el){
+      el.addEventListener(touchEvent, (event)=>{
+        if (!el.classList.contains('active')){
+          event.preventDefault();
+        }
+        if (activeElement != null && activeElement != el) {
+          activeElement.classList.remove('active');
+        }
+        activeElement = el;
+        el.classList.toggle('active');
+      });
+    });
+
   },
   lazyLoadImages: function(){
     var bLazy = new Blazy({ 
@@ -215,7 +242,6 @@ let Ufuture = {
       this.tl = new TimelineMax();
       
       Array.from(triggers).forEach(link => {
-        console.log(touchEvent);
         link.addEventListener(touchEvent, (event) => {
           this.clickedEl = event.target;
           event.preventDefault();

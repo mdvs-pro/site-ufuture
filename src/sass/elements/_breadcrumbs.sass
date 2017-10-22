@@ -7,6 +7,10 @@
   font-weight: 700
   text-transform: uppercase
   margin-bottom: 50px
+  +r(767)
+    font-size: 17px
+    line-height: 27px
+    padding-left: 20px
   &:before
     content: ''
     position: absolute
@@ -20,13 +24,18 @@
     transform: translateY(-50%)
     margin-top: .1em
     +r(767)
-      left: -16px;
+      transform: translateY(0)
+      top: 7px
+      left: 0
   &__item
     display: inline-block
     vertical-align: bottom
   &__item:first-child
     font-size: 30px
     line-height: 36px
+    +r(767)
+      font-size: 25px
+      line-height: 30px
   &__divider
     display: inline-block
     vertical-align: bottom

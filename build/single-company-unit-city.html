@@ -14,7 +14,7 @@
     <link rel="stylesheet" media="all" href="https://kfund-media.com/wp-content/uploads/2017/10/slick.css">
     <link rel="stylesheet" media="all" href="https://kfund-media.com/wp-content/uploads/2017/10/slick-theme.css"> </head>
 
-  <body class="no-touch">
+  <body>
     <!-- BEGIN content -->
     <div class="out single-company">
       <header class="header">
@@ -189,6 +189,32 @@
             autoplaySpeed: 1000,
             rows: 1,
             dots: false,
+            responsive: [
+            {
+              breakpoint: 1024,
+              settings:
+              {
+                slidesToShow: 3,
+                slidesToScroll: 3,
+                infinite: true
+              }
+            },
+            {
+              breakpoint: 600,
+              settings:
+              {
+                slidesToShow: 2,
+                slidesToScroll: 2
+              }
+            },
+            {
+              breakpoint: 480,
+              settings:
+              {
+                slidesToShow: 1,
+                slidesToScroll: 1
+              }
+            }]
           });
         });
 
@@ -201,15 +227,31 @@
             </header>
             <!-- slick -->
             <section class="center slider">
-              <div> <a href="single-company-udp.html"> <img class="img-responsive" src="img/logo/udp-cover.jpg" alt="udp logo"></a> </div>
-              <div> <a class="grid__link" href="single-company-udpr.html">   <img class="img-responsive" src="img/logo/UDPR-cover.jpg" alt="udpr logo"></a> </div>
-              <div> <a class="grid__link" href="single-company-biofarma.html">  <img class="img-responsive" src="img/logo/biofarma-cover.jpg" alt="Biofarma logo"></a> </div>
-              <div> <a class="grid__link" href="single-company-airport.html"> <img class="img-responsive" src="img/logo/airport-cover.jpg" alt="airoport kiev logo"></a> </div>
-              <div> <a class="grid__link" href="single-company-ip-bt.html"> <img class="img-responsive" src="img/logo/ipbt-cover.jpg" alt="BILA TSERKVA INDUSTRIAL PARK logo"></a> </div>
-              <div> <a class="grid__link" href="single-company-unit-city.html">  <img class="img-responsive" src="img/logo/unit-cover.jpg" alt="unit logo"></a> </div>
-              <div> <a class="grid__link" href="single-company-lviv.html">  <img class="img-responsive" src="img/logo/lvivtech-cover.jpg" alt="lvivtech logo"></a></a>
+              <div> <a href="single-company-udp.html">
+            <img class="img-responsive" src="img/logo/udp-cover.jpg" alt="udp logo">
+          </a> </div>
+              <div> <a class="grid__link" href="single-company-udpr.html">
+            <img class="img-responsive" src="img/logo/UDPR-cover.jpg" alt="udpr logo">
+          </a> </div>
+              <div> <a class="grid__link" href="single-company-biofarma.html">
+            <img class="img-responsive" src="img/logo/biofarma-cover.jpg" alt="Biofarma logo">
+          </a> </div>
+              <div> <a class="grid__link" href="single-company-airport.html">
+            <img class="img-responsive" src="img/logo/airport-cover.jpg" alt="airoport kiev logo">
+          </a> </div>
+              <div> <a class="grid__link" href="single-company-ip-bt.html">
+            <img class="img-responsive" src="img/logo/ipbt-cover.jpg" alt="BILA TSERKVA INDUSTRIAL PARK logo">
+          </a> </div>
+              <div> <a class="grid__link" href="single-company-unit-city.html">
+            <img class="img-responsive" src="img/logo/unit-cover.jpg" alt="unit logo">
+          </a> </div>
+              <div> <a class="grid__link" href="single-company-lviv.html">
+            <img class="img-responsive" src="img/logo/lvivtech-cover.jpg" alt="lvivtech logo">
+          </a> </a>
               </div>
-              <div> <a class="grid__link" href="single-company-ptm-ukraine.html"> <img class="img-responsive" src="img/logo/rtm-cover.jpg" alt="rtm logo"></a> </div>
+              <div> <a class="grid__link" href="single-company-ptm-ukraine.html">
+            <img class="img-responsive" src="img/logo/rtm-cover.jpg" alt="rtm logo">
+          </a> </div>
             </section>
           </div>
         </div>

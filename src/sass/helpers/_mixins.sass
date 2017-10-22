@@ -35,7 +35,11 @@
   white-space: nowrap
 
 =hover
-  .no-touch &:hover
+  .no-touchevents &:hover
+    @content
+
+=for-touch
+  .touchevents
     @content
 
 %pseudo
