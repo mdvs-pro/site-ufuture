@@ -4,13 +4,7 @@
   <head>
     <meta charset="utf-8">
     <title>{% if title %}{{ title }}{% else %}Template{% endif %}</title>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#fff">
-    <link rel="icon" type="image/png" href="http://ufuture.com/favicon.png" sizes="32x32">    
-    <meta name="format-detection" content="telephone=no">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&amp;subset=cyrillic" rel="stylesheet">
-    <link rel="stylesheet" media="all" href="css/app.css">
+    {% include "../partials/base/_include-head.html" %}
     {# {% include "../partials/_media-tags.html" %} #}
   </head>
   <body class="no-touch">
@@ -26,11 +20,7 @@
     {% include "../partials/_body-bottom.html" %}
 
     <!-- BEGIN scripts -->
-    <script src="//cdn.jsdelivr.net/blazy/latest/blazy.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>  
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/ScrollMagic.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
-    <script type="text/javascript" src="js/app.js"></script>
+    {% include "../partials/base/_include-bottom.html" %}
     <!-- END scripts -->
 
   </body>
