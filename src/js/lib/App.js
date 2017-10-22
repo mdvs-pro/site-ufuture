@@ -91,7 +91,7 @@ let Ufuture = {
     }
 
     // scroll to top
-    el.addEventListener("click", function(){
+    el.addEventListener(touchEvent, function(){
       window.scroll({ top: 0, left: 0, behavior: 'smooth' });
     });
     
