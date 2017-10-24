@@ -1,0 +1,111 @@
+---
+title: Відтепер на свій рейс в аеропорті «Київ» можна зареєструватися самостійно
+
+scroll: true
+pageClass: single-post
+category: News 
+category_href: media.html
+child_category: IEV AERO
+child_category_href: media.html
+tags:
+- name: UDPR,
+  href: media.html
+subcategories:
+- name: UDPR,
+  href: media.html
+- name: IEV AERO
+  href: media.html
+
+---
+{% extends "layouts/_single-post.html" %}
+
+{% block content %}
+  <main class="page__article sc bg-gradient--h300 sc--media">
+    <div class="container">
+      <span class="position-top">
+        {% include "partials/_follow.html" %}
+      </span>
+      <div class="container-inner">
+        <div class="row">
+          <article class="post col-2-3_md">
+              <div class="breadcrumbs">
+                <span class="breadcrumbs__item">
+                  <a href="media.html" class="breadcrumbs__link">Media</a>
+                </span>
+                <span class="breadcrumbs__divider">&gt;</span>
+                <span class="breadcrumbs__item">
+                    <a href="{% if category_href %}{{ category_href }}{% else %}[category_href]{% endif %}" class="breadcrumbs__link">{% if category %}{{ category }}{% else %}[category]{% endif %}</a>
+                </span>              
+                <span class="breadcrumbs__divider">&gt;</span>
+                <span class="breadcrumbs__item">
+                    <a href="{% if child_category_href %}{{ child_category_href }}{% else %}[child_category_href]{% endif %}" class="breadcrumbs__link">{% if child_category %}{{ child_category }}{% else %}[child_category]{% endif %}</a>
+                </span> 
+                <span class="breadcrumbs__item"></span>
+              </div>
+            <!-- start press-release -->
+            <article class="post post--single">
+              <div class="post__image-front">
+                <span href="single-news-001.html" class="link">
+                  <img class="img-responsive b-lazy post__image-back" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                    data-src="img/temp/media/airo.jpg" alt="news-image">
+                </span>
+              </div>
+              <div class="post__content">
+                <h1 class="post__heading">Відтепер на свій рейс в аеропорті «Київ» можна зареєструватися самостійно</h1>
+                <div class="post__meta">
+                  <time class="entry-date published updated post__date" datetime="2017-10-15T09:00:00+00:00"> 18 October, 2017</time>
+                  <a href="#" class="post__category">iev aero</a>
+                </div>
+                <p class="post__text">В аеропорту «Київ» апгрейд. Відтепер на свій рейс можна зареєструватися самостійно. Нині у залі виліту міжнародного Терміналу встановлено кіоски самостійної реєстрації. Онлайн-чек-ін або онлайн-реєстрацію призначено для того, аби пасажир, в режимі онлайн, зареєструвався на рейс і мав можливість самостійно роздрукувати свій посадковий талон. Кіоск для самостійної реєстрації зручний в опануванні, реєстрація триватиме не більше 1,30 хвилин. Для реєстрації потрібен лише паспорт.</p>
+                <p class="post__text">Тепер скористатися послугою онлайн реєстрації в аеропорту можуть пасажири рейсів двох авіакомпаній - LOT та Buta Airways (Azerbaijan Airlines). Сподіваємось, що й інші авіакомпанії приєднуються до зручної програми.</p>
+                <img src="http://iev.aero.images.1c-bitrix-cdn.ru/upload/medialibrary/fa7/fa78e0694b823c24a52d2a0c4291686b.jpg?1508322073171839" width="100%" height="450" />
+                <a class="post-link" href="http://iev.aero/about/news/554/" target="_blank" rel="nofollow"> source </a>
+                
+
+              </div>
+            </article>
+            <!-- start press-release -->
+            <ul style="display: none;" class="single__tags tags tags--footer">
+              {% for tag in tags %}
+                <li class="tags__item">
+                  <a href="{{tag.href}}" class="tags__link">{{tag.name}}</a>
+                </li>
+              {% endfor %}
+            </ul>
+            <div class="post__share" style="display: none;">
+              <div class="u-follow u-follow--share">
+                <div class="u-follow__box">
+                  <div class="u-follow__inline-text">
+                    <p class="u-follow__p">Share</p>
+                      <span class="u-follow__line"></span> 
+                  </div>
+                  <ul class="u-follow__inline-soc">
+                    <li class="u-follow__soc-i"> <a href="https://www.facebook.com/UFuture-307751569628589/" class="sq" target="_blank">
+                      <span class="sq__box">
+                        <i class="sq__vcenter">
+                          <svg class="icon icon-facebook"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite.svg#icon-facebook"></use></svg>
+                        </i>
+                      </span>
+                    </a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </article>
+          <aside class="sidebar col-1-3_md">
+            <h2 class="news__aside-h news__aside-h--first">Last News</h2>
+            {% include "partials/single-post/_slider-last-media.html" %}
+            <h4 class="news__aside-h">Tags</h4>
+            <ul class="single__tags tags">
+              {% for subcategory in subcategories %}
+                <li class="tags__item">
+                  <a href="{{subcategory.href}}" class="tags__link">{{subcategory.name}}</a>
+                </li>
+              {% endfor %}
+            </ul>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </main>
+{% endblock %}
