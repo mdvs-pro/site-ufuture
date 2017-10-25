@@ -1,0 +1,116 @@
+---
+title: Відтепер на свій рейс в аеропорті «Київ» можна зареєструватися самостійно
+
+scroll: true
+pageClass: single-post
+category: VASYL KHMELNYTSKY 
+category_href: founder-photo.html
+
+---
+{% extends "layouts/_single-post.html" %}
+
+{% block content %}
+  <main class="page__article sc bg-gradient--h300 sc--media">
+    <div class="container">
+      <span class="position-top">
+        {% include "partials/_follow.html" %}
+      </span>
+      <div class="container-inner">
+        <div class="row">
+
+          <article class="post col-3-3_md">
+              <div class="breadcrumbs">
+                <span class="breadcrumbs__item">
+                  <a href="founder-photo.html" class="breadcrumbs__link">PHOTO</a>
+                </span>
+                <span class="breadcrumbs__divider">&gt;</span>
+                <span class="breadcrumbs__item">
+                    <a href="{% if category_href %}{{ category_href }}{% else %}[category_href]{% endif %}" class="breadcrumbs__link">{% if category %}{{ category }}{% else %}[category]{% endif %}</a>
+                </span>              
+
+                <span class="breadcrumbs__item"></span>
+              </div>
+            <!-- start press-release -->
+            <article class="post post--single">
+              <div class="post__image-front">
+
+              <div class="post__content">
+                              
+
+                <!-- photo -->
+<section id="pattern" class="pattern">
+          <ul class="grid">
+
+              <li class="grid__col">
+                <a href="img/temp/founder/Khmelnytsky_1.jpg" target="_blank" class="read-more"> 
+                   <img class="img-responsive" src="img/temp/founder/Khmelnytsky_1.jpg" alt="udpr logo">
+              </a>
+             </li>
+
+             <li class="grid__col">
+                <a href="img/temp/founder/Khmelnytsky_2.jpg" target="_blank" class="read-more"> 
+                   <img class="img-responsive" src="img/temp/founder/Khmelnytsky_2.jpg" alt="udpr logo">
+              </a>
+             </li>
+
+             <li class="grid__col">
+                <a href="img/temp/founder/Khmelnytsky_3.jpg" target="_blank" class="read-more"> 
+                   <img class="img-responsive" src="img/temp/founder/Khmelnytsky_3.jpg" alt="udpr logo">
+              </a>
+             </li>
+
+             <li class="grid__col">
+                <a href="img/temp/founder/Khmelnytsky_4.jpg" target="_blank" class="read-more"> 
+                   <img class="img-responsive" src="img/temp/founder/Khmelnytsky_4.jpg" alt="udpr logo">
+              </a>
+             </li>
+
+             <li class="grid__col">
+                <a href="img/temp/founder/Khmelnytsky_5.jpg" target="_blank" class="read-more"> 
+                   <img class="img-responsive" src="img/temp/founder/Khmelnytsky_5.jpg" alt="udpr logo">
+              </a>
+             </li>
+
+
+
+          </ul>
+        </section>
+                <!-- photo -->
+                
+
+              </div>
+            </article>
+            <!-- start press-release -->
+            <ul style="display: none;" class="single__tags tags tags--footer">
+              {% for tag in tags %}
+                <li class="tags__item">
+                  <a href="{{tag.href}}" class="tags__link">{{tag.name}}</a>
+                </li>
+              {% endfor %}
+            </ul>
+            <div class="post__share" style="display: none;">
+              <div class="u-follow u-follow--share">
+                <div class="u-follow__box">
+                  <div class="u-follow__inline-text">
+                    <p class="u-follow__p">Share</p>
+                      <span class="u-follow__line"></span> 
+                  </div>
+                  <ul class="u-follow__inline-soc">
+                    <li class="u-follow__soc-i"> <a href="https://www.facebook.com/UFuture-307751569628589/" class="sq" target="_blank">
+                      <span class="sq__box">
+                        <i class="sq__vcenter">
+                          <svg class="icon icon-facebook"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite.svg#icon-facebook"></use></svg>
+                        </i>
+                      </span>
+                    </a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </div>
+  </main>
+{% endblock %}
