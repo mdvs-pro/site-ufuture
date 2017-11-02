@@ -10,7 +10,12 @@
     <link rel="icon" type="image/png" href="http://ufuture.com/favicon.png" sizes="32x32">
     <meta name="format-detection" content="telephone=no">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&amp;subset=cyrillic" rel="stylesheet">
-    <link rel="stylesheet" media="all" href="css/app.css"> </head>
+    <link rel="stylesheet" media="all" href="css/app.css">
+    <!-- lightgallery css -->
+    <link rel='stylesheet prefetch' href='https://cdn.rawgit.com/sachinchoolur/lightgallery.js/master/dist/css/lightgallery.css'>
+    <link rel='stylesheet prefetch' href='http://s3.ufuture.com/css/lightgallery/style.css'>
+    <!-- end lightgallery css -->
+  </head>
 
   <body>
     <!-- BEGIN content -->
@@ -87,7 +92,7 @@
           </div>
         </div>
         <div class="header__box modal-container">
-          <div class="header__modal">
+          <div class="header__modal" style="visibility: hidden;">
             <div class="header__modal-bg"></div>
             <div class="header__modal-body">
               <ul class="m-nav js-m-nav"> </ul>
@@ -132,65 +137,77 @@
       </ul>
       <!--Pattern HTML-->
       <section id="pattern" class="pattern">
-        <!-- 
-        <h2 class="media__heading">Lviv-Tech.city</h2>
+        <h2 class="media__heading">Unit City</h2>
         <ul class="grid media__grid">
           <li class="grid__col">
             <article class="news__item post">
               <div class="news__face">
-                <div class="news__background" style="background-image:url('img/temp/press-release/lviv.jpg')"></div>
+                <div class="news__background" style="background-image:url('http://s2.ufuture.com/img/unit/open_day/min/7.jpg')"></div>
               </div>
               <div class="news__content">
-
-                <p class="post__text" style="height: 100px;">LvivTech.City </p>
-                <a href="img/l_1.jpg" target="_blank" class="read-more">More
+                <a href="photo-unit.html" class="read-more">
+                  <p class="post__text" style="height: 100px;">Open_Day </p> More
                   <div class="loading-dot-button ">
                     <div class="loading-dot"></div>
                     <div class="loading-dot"></div>
                     <div class="loading-dot"></div>
-                  </div>
-                  <span class="angle-white angle--right"></span>
-                </a>
+                  </div> <span class="angle-white angle--right"></span> </a>
               </div>
             </article>
           </li>
           <li class="grid__col">
             <article class="news__item post">
               <div class="news__face">
-                <div class="news__background" style="background-image:url('img/temp/press-release/lviv2.jpg')"></div>
+                <div class="news__background" style="background-image:url('http://s2.ufuture.com/img/unit/Mik_Butcher_in_UNIT_City/1.jpg')"></div>
               </div>
               <div class="news__content">
-
-                <p class="post__text" style="height: 100px;">LvivTech.City </p>
-                <a href="img/l_1.jpg" target="_blank" class="read-more">More
+                <a href="photo-unit1.html" class="read-more">
+                  <p class="post__text" style="height: 100px;">Mik Butcher in UNIT City </p> More
                   <div class="loading-dot-button ">
                     <div class="loading-dot"></div>
                     <div class="loading-dot"></div>
                     <div class="loading-dot"></div>
-                  </div>
-                  <span class="angle-white angle--right"></span>
-                </a>
+                  </div> <span class="angle-white angle--right"></span> </a>
               </div>
             </article>
           </li>
-          <li class="grid__col">
+          <li class="grid__col" style="display: none;">
             <div class="rect-block">
-              <div class="rect-block__content">
-                <a href="img/l_1.jpg" target="_blank" class="read-more">More Photo
+              <div class="rect-block__content"> <a href="img/l_1.jpg" target="_blank" class="read-more">More Photo
                   <div class="loading-dot-button ">
                     <div class="loading-dot"></div>
                     <div class="loading-dot"></div>
                     <div class="loading-dot"></div>
                   </div>
                   <span class="angle-white angle--right"></span>
-                </a>
-              </div>
+                </a> </div>
             </div>
           </li>
         </ul>
--->
-        <!-- end one -->
-        <!-- two     
+        <!-- two -->
+        <h2 class="media__heading">LvivTech City</h2>
+        <ul class="grid media__grid">
+          <li class="grid__col">
+            <article class="news__item post">
+              <div class="news__face">
+                <div class="news__background" style="background-image:url('http://s2.ufuture.com/img/lviv/1.jpg')"></div>
+              </div>
+              <div class="news__content">
+                <a href="photo-lviv_tech.html" class="read-more">
+                  <p class="post__text" style="height: 100px;">LvivTech City </p> More
+                  <div class="loading-dot-button ">
+                    <div class="loading-dot"></div>
+                    <div class="loading-dot"></div>
+                    <div class="loading-dot"></div>
+                  </div> <span class="angle-white angle--right"></span> </a>
+              </div>
+            </article>
+          </li>
+        </ul>
+        <! -- end two -->
+      </section>
+      <!-- end one -->
+      <!-- two     
         <h2 class="media__heading">Lviv-Tech.city</h2>
         <ul class="grid media__grid">
           <li class="grid__col">
