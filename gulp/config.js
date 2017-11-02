@@ -32,7 +32,7 @@ var config = {
     dest: {
         root : destPath,
         html : destPath,
-        css  : destPath + '/css',
+        css  : destPath,
         js   : destPath + '/js',
         jsLib: destPath + '/js/exp',
         img  : destPath + '/img',
