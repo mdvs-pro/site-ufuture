@@ -1,0 +1,118 @@
+---
+title: K.FUND AND LEAN INSTITUTE UKRAINE TO PRESENT THE BOOK ABOUT EFFECTIVE MANAGEMENT AT KIEF
+
+scroll: true
+pageClass: single-post
+category: News 
+category_href: media.html
+child_category: KIEF
+child_category_href: news-kief.html
+tags:
+- name: KIEF,
+  href: news-kief.html
+subcategories:
+- name: KIEF,
+  href: news-kief.html
+- name: UNIT Facotry
+  href: media.html
+
+---
+{% extends "layouts/_single-post.html" %}
+
+{% block content %}
+  <main class="page__article sc bg-gradient--h300 sc--media">
+    <div class="container">
+      <span class="position-top">
+        {% include "partials/_follow.html" %}
+      </span>
+      <div class="container-inner">
+        <div class="row">
+          <article class="post col-2-3_md">
+              <div class="breadcrumbs">
+                <span class="breadcrumbs__item">
+                  <a href="media.html" class="breadcrumbs__link">Media</a>
+                </span>
+                <span class="breadcrumbs__divider">&gt;</span>
+                <span class="breadcrumbs__item">
+                    <a href="{% if category_href %}{{ category_href }}{% else %}[category_href]{% endif %}" class="breadcrumbs__link">{% if category %}{{ category }}{% else %}[category]{% endif %}</a>
+                </span>              
+                <span class="breadcrumbs__divider">&gt;</span>
+                <span class="breadcrumbs__item">
+                    <a href="{% if child_category_href %}{{ child_category_href }}{% else %}[child_category_href]{% endif %}" class="breadcrumbs__link">{% if child_category %}{{ child_category }}{% else %}[child_category]{% endif %}</a>
+                </span> 
+                <span class="breadcrumbs__item"></span>
+              </div>
+            <!-- start press-release -->
+            <article class="post post--single">
+              <div class="post__image-front">
+                 <span  class="link">
+                  <img class="img-responsive b-lazy post__image-back" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                    data-src="http://s2.ufuture.com/img/news/books_lean.jpg" alt="news-image">
+                </span>
+              </div>
+              <div class="post__content">
+                <h1 class="post__heading">K.FUND AND LEAN INSTITUTE UKRAINE TO PRESENT THE BOOK ABOUT EFFECTIVE MANAGEMENT AT KIEF</h1>
+                <div class="post__meta">
+                  <time class="entry-date published updated post__date" datetime="2017-10-15T09:00:00+00:00"> 12 October, 2017</time>
+                  <a href="news-kief.html" class="post__category">KIEF</a>
+                </div>
+                <p class="post__text">The Work of Management: A Daily Path to Sustainable Improvement by Jim Lancaster was published in the Ukrainian language under the title «Лідерство в стилі LEAN: шлях до постійного вдосконалення вашого бізнесу».</p>
+                <p>Kyiv, 04 October 2017. — Vasyl Khmelnytsky’s fund – K.Fund – together with Lean Institute Ukraine published Jim Lancaster’s book The Work of Management: A Daily Path to Sustainable Improvement in the Ukrainian language. The presentation of the book will be held at Kyiv International Economic Forum with the participation of Serhii Komberianov, the president of Lean Institute Ukraine and science editor of the Ukrainian edition.</p>
+                <p>Jim Lancaster is the CEO of Lantech, the machine manufacturing company, which was one of the lean (the management concept based on minimization of all kind of waste) leaders in the 1990s. His book will be of service to those who have been implementing lean practices for long, as well as to those who have only set sights on the improvement of their businesses and are ready to study the art of lean.</p>
+                <blockquote>“This is the story I have been waiting for. Jim generously shares his experience of mistakes which are, believe me, common for most of Ukrainian top managers. The book clearly shows how to proceed from the management a la putting out a fire to creating conditions for fires to never appear. I recommend the book to business owners, CEOs, divisional managers and to everybody who is looking for clear guidance in management of volatile processes, as well as those willing to bring up self-acting and initiative workers,” noted Serhii Komberianov, the president of Lean Institute Ukraine.</blockquote>
+                <p>The Work of Management is a close-up, candid story of the leader, who succeeded to take his company to a new level of development, to achieve the never-before-seen profitability and to provide it with leadership positions at its market. To replicate his success, one only needs eight steps. They will help to create a bullet-proof, real-time daily management system. Jim Lancaster describes these steps in detail and instantiates them with the experience of his company.</p>
+                <blockquote>“In plain language and illustrations, Jim shows a management system you can apply to your organization with dramatic results… I think you will find it inspiring and fun too”, <cite>– wrote Jim Womack, Founder and Senior Advisor of Lean Enterprise Institute, USA, in the book foreword.</cite></blockquote>
+                <p>You can learn more about this and other K.Fund books on the page of <a class="post-link" href="http://kfund.ua/en/k-fund-books-eng/" target="_blank" rel="nofollow">K.Fund Books</a> project.</p>
+                <p style="font-weight: 500;">Reference</p>
+                <p>K.Fund was founded by Ukrainian entrepreneur Vasyl Khmelnytsky in 2015 to support projects related to education and the economy. K.Fund’s mission is to give the keys to development and self-fulfilment, to provide opportunities for the acquisition of new knowledge and skills, give assistance in making breakthroughs and assisting people to reach a new level.</p>
+                <p>The social initiatives supported by Vasyl Khmelnytsky’s K.Fund include the Kyiv International Economic Forum (KIEF); the Bila Tserkva 2025 modern model for regional development; the K.Fund Books publishing project; the projects of the Osvitoria Social Organisation: a modern secondary school Novopecherska School in Kyiv and iLearn online platform for orphans and children from low-income families; the UNIT Factory unique educational IT factory; the first inter-corporate IT university BIONIC University; Lean Institute Ukraine, and others.</p>
+                <p>Lean Institute Ukraine (LIU) is a non-profit organization designed to raise the innovativeness and the competitiveness of Ukrainian companies through the implementation of lean methodology. The organization is founded with the support of K.Fund. LIU is a member of Lean Global Network, which is comprised of 21 education and research organizations and dozens of co-learning partners across the globe.</p>
+                <p>Kyiv International Economic Forum (KIEF) is a permanently operating venue for the formation of Ukrainian economic development strategy. It is aimed to set up a dialogue between experts, businesses and government, borrowing the best international practices, creating a road map for the development and promotion of the conversion of ideas into real action.</p>
+
+              </div>
+            </article>
+            <!-- start press-release -->
+            <ul style="display: none;" class="single__tags tags tags--footer">
+              {% for tag in tags %}
+                <li class="tags__item">
+                  <a href="{{tag.href}}" class="tags__link">{{tag.name}}</a>
+                </li>
+              {% endfor %}
+            </ul>
+            <div class="post__share" style="display: none;">
+              <div class="u-follow u-follow--share">
+                <div class="u-follow__box">
+                  <div class="u-follow__inline-text">
+                    <p class="u-follow__p">Share</p>
+                      <span class="u-follow__line"></span> 
+                  </div>
+                  <ul class="u-follow__inline-soc">
+                    <li class="u-follow__soc-i"> <a href="https://www.facebook.com/UFuture-307751569628589/" class="sq" target="_blank">
+                      <span class="sq__box">
+                        <i class="sq__vcenter">
+                          <svg class="icon icon-facebook"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite.svg#icon-facebook"></use></svg>
+                        </i>
+                      </span>
+                    </a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </article>
+          <aside class="sidebar col-1-3_md">
+            <h2 class="news__aside-h news__aside-h--first">Last News</h2>
+            {% include "partials/single-post/_slider-last-media.html" %}
+            <h4 class="news__aside-h">Tags</h4>
+            <ul class="single__tags tags">
+              {% for subcategory in subcategories %}
+                <li class="tags__item">
+                  <a href="{{subcategory.href}}" class="tags__link">{{subcategory.name}}</a>
+                </li>
+              {% endfor %}
+            </ul>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </main>
+{% endblock %}

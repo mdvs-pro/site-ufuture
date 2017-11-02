@@ -37,6 +37,11 @@
     font-size: 30px
     line-height: 32px
     margin: 25px 0 7px
+    .link
+      font-size: 17px
+      font-weight: 500
+    +r(1199)
+      font-size: 24px
   .post__meta
     font-size: 16px
     margin-bottom: 20px
@@ -60,13 +65,16 @@
       color: $color_t
     .link
       color: $color_t
+      +r(991)
+        font-size: 16px
       +hover
-        color: $color_white
+        color: $color_secondary
     &__content
       position: relative
       padding: 20px
-      background: $color_secondary
-      height: 200px
+      background: #fff
+      height: auto
+      border: 1px solid #f7f7f7
     &__date
       font-size: 14px
       line-height: 1.2
@@ -86,9 +94,9 @@
       object-fit: cover
 
 .post--hover
-  .post__content
-    transition: opacity .3s
-    opacity: 0
+ // .post__content
+ //   transition: opacity .3s
+ //   opacity: 0
   +hover 
     .post__content
       opacity: 1

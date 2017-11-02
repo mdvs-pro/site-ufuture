@@ -1,0 +1,125 @@
+---
+title: LvivTech City
+
+scroll: true
+pageClass: single-post
+category: Photo 
+category_href: photo.html
+
+
+---
+{% extends "layouts/_single-photo.html" %}
+
+{% block content %}
+  <main class="page__article sc bg-gradient sc--media">
+    <div class="container">
+      <span class="position-top">
+        {% include "partials/_follow.html" %}
+      </span>
+      <div class="container-inner">
+        <div class="row">
+          <article class="post col-3-3_md">
+              <div class="breadcrumbs">
+                <span class="breadcrumbs__item">
+                  <a href="media.html" class="breadcrumbs__link">Newsroom</a>
+                </span>
+                <span class="breadcrumbs__divider">&gt;</span>
+                <span class="breadcrumbs__item">
+                    <a href="{% if category_href %}{{ category_href }}{% else %}[category_href]{% endif %}" class="breadcrumbs__link">{% if category %}{{ category }}{% else %}[category]{% endif %}</a>
+                </span>              
+
+              </div>
+            <!-- start press-release -->
+            <article class="post post--single">
+                             <!-- photo -->
+<h1 class="post__heading">LvivTech City </h1>
+<div class="post__meta"> <time class="entry-date published updated post__date" datetime="2017-10-15T09:00:00+00:00"> 12 June, 2016</time> <a href="#" class="post__category">LvivTech City</a> </div>
+    <div class="demo-gallery">
+        <ul id="lightgallery">
+            <li data-responsive="http://s2.ufuture.com/img/lviv/1.jpg" data-src="http://s2.ufuture.com/img/lviv//1.jpg"
+                data-sub-html="Milk Butcher in UNIT City">
+              <a href="">
+                <img class="img-responsive" src="http://s2.ufuture.com/img/lviv//1.jpg">
+                <div class="demo-gallery-poster">
+                   <img src="https://sachinchoolur.github.io/lightgallery.js/static/img/zoom.png">
+                </div>
+              </a>
+            </li>
+            <li data-responsive="http://s2.ufuture.com/img/lviv/2.jpg" data-src="http://s2.ufuture.com/img/lviv//2.jpg"
+                data-sub-html="Milk Butcher in UNIT City">
+              <a href="">
+                <img class="img-responsive" src="http://s2.ufuture.com/img/lviv//2.jpg">
+                <div class="demo-gallery-poster">
+                   <img src="https://sachinchoolur.github.io/lightgallery.js/static/img/zoom.png">
+                </div>
+              </a>
+            </li>
+            <li data-responsive="http://s2.ufuture.com/img/lviv/3.jpg" data-src="http://s2.ufuture.com/img/lviv//3.jpg"
+                data-sub-html="Milk Butcher in UNIT City">
+              <a href="">
+                <img class="img-responsive" src="http://s2.ufuture.com/img/lviv//3.jpg">
+                <div class="demo-gallery-poster">
+                   <img src="https://sachinchoolur.github.io/lightgallery.js/static/img/zoom.png">
+                </div>
+              </a>
+            </li>
+            <li data-responsive="http://s2.ufuture.com/img/lviv/4.jpg" data-src="http://s2.ufuture.com/img/lviv//4.jpg"
+                data-sub-html="Milk Butcher in UNIT City">
+              <a href="">
+                <img class="img-responsive" src="http://s2.ufuture.com/img/lviv//4.jpg">
+                <div class="demo-gallery-poster">
+                   <img src="https://sachinchoolur.github.io/lightgallery.js/static/img/zoom.png">
+                </div>
+              </a>
+            </li>
+    
+    </ul>
+ 
+  </div>   
+<!-- end photo -->
+
+
+            </article>
+            <!-- start press-release -->
+
+            <div class="post__share" style="display: none;">
+              <div class="u-follow u-follow--share">
+                <div class="u-follow__box">
+                  <div class="u-follow__inline-text">
+                    <p class="u-follow__p">Share</p>
+                      <span class="u-follow__line"></span> 
+                  </div>
+                  <ul class="u-follow__inline-soc">
+                    <li class="u-follow__soc-i"> <a href="https://www.facebook.com/UFuture-307751569628589/" class="sq" target="_blank">
+                      <span class="sq__box">
+                        <i class="sq__vcenter">
+                          <svg class="icon icon-facebook"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite.svg#icon-facebook"></use></svg>
+                        </i>
+                      </span>
+                    </a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </div>
+  </main>
+
+
+<!-- light gallery js -->
+
+<script src='https://cdn.rawgit.com/sachinchoolur/lightgallery.js/master/dist/js/lightgallery.js'></script>
+<script src='https://cdn.rawgit.com/sachinchoolur/lg-pager.js/master/dist/lg-pager.js'></script>
+<script src='https://cdn.rawgit.com/sachinchoolur/lg-autoplay.js/master/dist/lg-autoplay.js'></script>
+
+<script src='https://cdn.rawgit.com/sachinchoolur/lg-fullscreen.js/master/dist/lg-fullscreen.js'></script>
+<script src='https://cdn.rawgit.com/sachinchoolur/lg-zoom.js/master/dist/lg-zoom.js'></script>
+<script src='https://cdn.rawgit.com/sachinchoolur/lg-hash.js/master/dist/lg-hash.js'></script>
+<script src='https://cdn.jsdelivr.net/picturefill/2.3.1/picturefill.min.js'></script>
+<script src="http://s4.ufuture.com/js/lightgallery/index.js"></script>
+<!-- end light gallery js -->
+
+{% endblock %}

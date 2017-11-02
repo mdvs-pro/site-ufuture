@@ -7,10 +7,15 @@
   font-weight: 700
   text-transform: uppercase
   margin-bottom: 50px
+  +rmin(992)
+    margin-left: 0px
+  +r(991)
+    margin-left: -15px
   +r(767)
     font-size: 17px
     line-height: 27px
     padding-left: 20px
+
   &:before
     content: ''
     position: absolute
@@ -46,3 +51,62 @@
     text-decoration: none
     +hover
       color: $color_secondary
+
+
+
+.download
+  position: relative
+  padding-top: 30px;
+  margin-bottom: 0px;
+  font-size: 18px
+  line-height: 27px
+  color: $color_t
+  font-family: $font_secondary
+  font-weight: 700
+  text-transform: uppercase
+  +rmin(992)
+    margin-left: 0px
+  +r(991)
+    
+  +r(767)
+    font-size: 17px
+    line-height: 27px
+    
+    +r(767)
+      transform: translateY(0)
+      top: 7px
+      left: 0
+  &__item
+    display: inline-block
+    vertical-align: bottom
+  &__item:first-child
+    font-size: 26px
+    line-height: 30px
+    +r(767)
+      font-size: 22px
+      line-height: 30px
+  &__divider
+    display: inline-block
+    vertical-align: bottom
+    color: $color_secondary
+    margin: 0 10px
+  &__link
+    color: $color_t
+    text-decoration: none
+    +hover
+      color: $color_secondary   
+
+.download-img-companies
+  position: relative
+  top: 3px
+  margin-right: 5px;    
+
+.open_sans 
+    font-family: "Open Sans",sans-serif
+    text-transform: capitalize
+    font-weight: 500
+    font-size: 16px
+
+.three-lvl
+    font-weight: 400
+    font-size: 20px

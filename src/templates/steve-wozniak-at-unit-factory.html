@@ -1,0 +1,108 @@
+---
+title: STEVE WOZNIAK AT UNIT FACTORY
+
+scroll: true
+pageClass: single-post
+category: News 
+category_href: media.html
+child_category: Unit Factory
+child_category_href: media.html
+tags:
+- name: UDPR,
+  href: media.html
+subcategories:
+- name: UNIT City,
+  href: media.html
+- name: KIEF
+  href: news-kief.html
+
+---
+{% extends "layouts/_single-post.html" %}
+
+{% block content %}
+  <main class="page__article sc bg-gradient--h300 sc--media">
+    <div class="container">
+      <span class="position-top">
+        {% include "partials/_follow.html" %}
+      </span>
+      <div class="container-inner">
+        <div class="row">
+          <article class="post col-2-3_md">
+              <div class="breadcrumbs">
+                <span class="breadcrumbs__item">
+                  <a href="media.html" class="breadcrumbs__link">Media</a>
+                </span>
+                <span class="breadcrumbs__divider">&gt;</span>
+                <span class="breadcrumbs__item">
+                    <a href="{% if category_href %}{{ category_href }}{% else %}[category_href]{% endif %}" class="breadcrumbs__link">{% if category %}{{ category }}{% else %}[category]{% endif %}</a>
+                </span>              
+                <span class="breadcrumbs__divider">&gt;</span>
+                <span class="breadcrumbs__item">
+                    <a href="{% if child_category_href %}{{ child_category_href }}{% else %}[child_category_href]{% endif %}" class="breadcrumbs__link">{% if child_category %}{{ child_category }}{% else %}[child_category]{% endif %}</a>
+                </span> 
+                <span class="breadcrumbs__item"></span>
+              </div>
+            <!-- start press-release -->
+            <article class="post post--single">
+              <div class="post__image-front">
+                <span href="single-news-001.html" class="link">
+                  <iframe width="100%" height="450" src="https://www.youtube.com/embed/Dle9MNMSxas" frameborder="0" allowfullscreen></iframe>
+                </span>
+              </div>
+              <div class="post__content">
+                <h1 class="post__heading">STEVE WOZNIAK AT UNIT FACTORY</h1>
+                <div class="post__meta">
+                  <time class="entry-date published updated post__date" datetime="2017-10-15T09:00:00+00:00"> 12 October, 2017</time>
+                  <a href="#" class="post__category">UNIT Factory</a>
+                </div>
+                <p class="post__text">“If I lived in Ukraine, I would have been studying at UNIT Factory,” said Apple’s founder Steve Wozniak. On September 30, he visited UNIT Factory, where he arranged an excursion, and then – a meeting with students.</p>
+                
+                
+
+              </div>
+            </article>
+            <!-- start press-release -->
+            <ul style="display: none;" class="single__tags tags tags--footer">
+              {% for tag in tags %}
+                <li class="tags__item">
+                  <a href="{{tag.href}}" class="tags__link">{{tag.name}}</a>
+                </li>
+              {% endfor %}
+            </ul>
+            <div class="post__share" style="display: none;">
+              <div class="u-follow u-follow--share">
+                <div class="u-follow__box">
+                  <div class="u-follow__inline-text">
+                    <p class="u-follow__p">Share</p>
+                      <span class="u-follow__line"></span> 
+                  </div>
+                  <ul class="u-follow__inline-soc">
+                    <li class="u-follow__soc-i"> <a href="https://www.facebook.com/UFuture-307751569628589/" class="sq" target="_blank">
+                      <span class="sq__box">
+                        <i class="sq__vcenter">
+                          <svg class="icon icon-facebook"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite.svg#icon-facebook"></use></svg>
+                        </i>
+                      </span>
+                    </a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </article>
+          <aside class="sidebar col-1-3_md">
+            <h2 class="news__aside-h news__aside-h--first">Last News</h2>
+            {% include "partials/single-post/_slider-last-media.html" %}
+            <h4 class="news__aside-h">Tags</h4>
+            <ul class="single__tags tags">
+              {% for subcategory in subcategories %}
+                <li class="tags__item">
+                  <a href="{{subcategory.href}}" class="tags__link">{{subcategory.name}}</a>
+                </li>
+              {% endfor %}
+            </ul>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </main>
+{% endblock %}
