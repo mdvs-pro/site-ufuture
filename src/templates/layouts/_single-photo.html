@@ -1,0 +1,32 @@
+{% import "partials/_mixins.html" as mixins %}
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>{% if title %}{{ title }}{% else %}Template{% endif %}</title>
+    {% include "../partials/base/_include-head.html" %}
+    {# {% include "../partials/_media-tags.html" %} #}
+	<!-- lightgallery css -->
+	<link rel='stylesheet prefetch' href='https://cdn.rawgit.com/sachinchoolur/lightgallery.js/master/dist/css/lightgallery.css'>
+	<link rel='stylesheet prefetch' href='http://s3.ufuture.com/css/lightgallery/style.css'>
+	
+	<!-- end lightgallery css -->
+  </head>
+  <body>
+      {% include "../partials/_body-head.html" %}
+    <!-- BEGIN content -->
+    <div class="out {% if pageClass %}{{ pageClass }}{% else %}frontpage{% endif %}">
+      {% include "../partials/_header.html" %}
+      {% block content %}{% endblock %}
+      {% include "../partials/_footer.html" %}
+      {% include "../partials/_bottom-out.html" %}
+    </div>
+    <!-- END content -->
+    {% include "../partials/_body-bottom.html" %}
+
+    <!-- BEGIN scripts -->
+    {% include "../partials/base/_include-bottom.html" %}
+    <!-- END scripts -->
+
+  </body>
+</html>

@@ -1,0 +1,42 @@
+{% import "partials/_mixins.html" as mixins %}
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Vasyl Khmelnytsky launches an investment group ufuture - UFuture</title>
+    <meta name="description" content="UFuture Investment Group will represent the entrepreneur’s companies and projects at the local and international levels. The company is headquartered in Brussels."/>
+    <link rel="canonical" href="http://ufuture.com/"/>
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Vasyl Khmelnytsky launches an investment group ufuture - UFuture"/>
+    <meta property="og:description" content="UFuture Investment Group will represent the entrepreneur’s companies and projects at the local and international levels. The company is headquartered in Brussels."/>
+    <meta property="og:url" content="http://ufuture.com/ufuture-vasyl-khmelnytsky-launches-an-investment-group-ufuture.html"/>
+    <meta property="og:site_name" content="UFuture.com"/>
+    <meta property="og:image" content="http://ufuture.com/img/about-cover-min.jpg"/>
+    <meta property="og:image:width" content="1050"/>
+    <meta property="og:image:height" content="788"/>
+    {% include "../partials/base/_include-head.html" %}
+    {# {% include "../partials/_media-tags.html" %} #}
+  </head>
+  <body>
+      {% include "../partials/_body-head.html" %}
+    <!-- BEGIN content -->
+    <div class="out {% if pageClass %}{{ pageClass }}{% else %}frontpage{% endif %}">
+      {% include "../partials/_header.html" %}
+      <!-- <div class="page-top">
+        <div class="container">
+          <div class="container-inner">
+          </div>
+        </div>
+      </div> -->
+      {% block content %}{% endblock %}
+      {% include "../partials/_footer.html" %}
+      {% include "../partials/_bottom-out.html" %}
+    </div>
+    <!-- END content -->
+    {% include "../partials/_body-bottom.html" %}
+
+    <!-- BEGIN scripts -->
+    {% include "../partials/base/_include-bottom.html" %}
+    <!-- END scripts -->
+  </body>
+</html>
