@@ -29,6 +29,9 @@
     .post__content
       flex: 0 0 $grid_5_12
       max-width: $grid_5_12
+    .post__image-front
+      flex: 0 0 $grid_7_12
+      max-width: $grid_7_12
 
 .post--single
   .post__content
@@ -38,8 +41,10 @@
     line-height: 32px
     margin: 25px 0 7px
     .link
-      font-size: 17px
-      font-weight: 500
+      font-size: 30px
+      line-height: 32px
+      margin: 5px 0 
+      color: $color_t
     +r(1199)
       font-size: 24px
   .post__meta
@@ -47,8 +52,9 @@
     margin-bottom: 20px
   .post__image-back
     +rmin(992)
-      height: 400px
+      height: auto
       object-fit: cover
+      width: 100%
 
 .sidebar 
   .post
