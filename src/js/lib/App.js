@@ -22,7 +22,8 @@ let Ufuture = {
     this.fixedHeader();
     this.lazyLoadImages();
     this.smoothHashLinks();
-    this.scrollUp();
+    //this.scrollUp();
+    //this.historyBack();
     this.langSelect();
     this.searchBar();
     this.uModal.init();
@@ -90,10 +91,12 @@ let Ufuture = {
     event.initEvent("hashLinkClicked", true, true);
 
     linksArray = Array.from(linksArray);
+
     linksArray = linksArray.filter(function(link){
       let linkHref = link.getAttribute('href');
       return linkHref.length > 1 && linkHref[0] === '#';
     });
+    
     linksArray.forEach((link) => {
       link.addEventListener(touchEvent, function(e){
         e.preventDefault();
@@ -166,7 +169,7 @@ let Ufuture = {
         .fromTo(galleryEven, options.right.duration, {y: options.right.begin, ease:Linear.easeNone},{y: options.right.end, ease:Linear.easeNone});
         // .fromTo(galleryBgs, .3, {scale: options.bg.begin},{scale: options.bg.end});
       
-      let duration = 600;
+      let duration = 1280;
 
       let scene = new ScrollMagic.Scene({
         triggerElement: tweenItem, duration: duration,
@@ -227,6 +230,15 @@ let Ufuture = {
       } else {
         el.classList.remove(ACTIVE_CLASS);
       }
+    });
+  },
+  historyBack: function () {
+    let historyBtn = document.querySelector('#history-back');
+    if (window.history.length <= 1) {
+      historyBtn.classList.add('no-history')
+    }
+    historyBtn.addEventListener('click', function () {
+      window.history.back();
     });
   },
   uModal: {
