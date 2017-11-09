@@ -83,6 +83,20 @@
 	&__vcenter
 		font-size: 0
 		+vcenter
+	&__tip
+		position: absolute
+		text-transform: uppercase
+		top: 10px
+		left: 0
+		font-size: 14px
+		transform: translateX(-100%)
+		display: flex
+		align-items: center
+	&__line
+		width: 30px
+		height: 1px
+		background: $color_t
+		margin: 0 5px
 	svg
 		font-size: 17px
 	&:hover svg
@@ -138,3 +152,12 @@
     transition-timing-function: cubic-bezier(0.7,0,0.3,1)
 	&:after
 		transform: rotate(45deg)
+
+#history-back
+	position: absolute
+	right: 0
+	bottom: -65px
+	.home & 
+		display: none
+	+r(991)
+		display: none

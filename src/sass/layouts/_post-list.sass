@@ -54,6 +54,9 @@
   align-items: center
   justify-content: center
   margin-top: 90px
+  &__item.active .sq__box
+    background: #05c3de
+    color: $color_white
   &__list
     display: flex
     align-items: center
@@ -64,7 +67,7 @@
   &__num
     font-size: 15px
     font-style: normal
-  .sq__box
+  &__list .sq__box
     border-left-width: 1px
     border-right-width: 1px
   .page-nav__item:first-child .sq__box

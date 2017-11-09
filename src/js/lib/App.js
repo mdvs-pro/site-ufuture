@@ -22,7 +22,7 @@ let Ufuture = {
     this.fixedHeader();
     this.lazyLoadImages();
     this.smoothHashLinks();
-    //this.scrollUp();
+    this.scrollUp();
     //this.historyBack();
     this.langSelect();
     this.searchBar();
@@ -120,11 +120,6 @@ let Ufuture = {
       offset = this.getOffset(uFollow).top + uFollow.offsetHeight - window.innerHeight + 90; // 90 is scroll-top height + bottom
     }
 
-    // scroll to top
-    el.addEventListener(touchEvent, function(){
-      window.scroll({ top: 0, left: 0, behavior: 'smooth' });
-    });
-    
     // show/hide
     window.addEventListener('scroll',function() {
       scrolled = window.pageYOffset || document.documentElement.scrollTop;
