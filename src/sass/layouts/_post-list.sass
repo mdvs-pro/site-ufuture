@@ -49,14 +49,13 @@
       .post__date
         font-size: 16px
         line-height: 36px
+
 .page-nav
   display: flex
   align-items: center
   justify-content: center
-  margin-top: 90px
-  &__item.active .sq__box
-    background: #05c3de
-    color: $color_white
+  flex-wrap: wrap
+  margin-top: 60px
   &__list
     display: flex
     align-items: center
@@ -70,11 +69,22 @@
   &__list .sq__box
     border-left-width: 1px
     border-right-width: 1px
-  .page-nav__item:first-child .sq__box
-    border-left-width: 2px
-  .page-nav__item:last-child .sq__box
-    border-right-width: 2px
-
+  &__item
+    &.active .sq__box
+      background: #05c3de
+      color: $color_white
+    &:first-child .sq__box
+      border-left-width: 2px
+    &:last-child .sq__box
+      border-right-width: 2px
+  +r(767)
+    &__list
+      order: -1
+      flex-basis: 100%
+      margin-bottom: 10px
+    &__nlink .sq__box
+      border-top-width: 1px
+      
 .post__meta
   a
     text-transform: uppercase

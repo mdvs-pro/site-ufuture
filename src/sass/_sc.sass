@@ -8,6 +8,7 @@
     position: relative
     padding: $heading_pad 0
     line-height: 1
+    word-wrap: break-word
     +r(767)
       padding-top: 60px
     &:before
@@ -18,18 +19,15 @@
       background: $color_secondary
       display: inline-block
       vertical-align: middle
+      top: $heading_pad
       left: -44px
-      top: 50%
-      transform: translateY(-50%)
-      margin-top: .1em
+      margin-top: 4px
       +r(767)
         left: -24px
     &--bwhite:before
       background: #ffffff
     &--pb20
       padding-bottom: 20px
-      &:before
-        margin-top: 20px
   &.bg-gradient
     position: relative
     background: $color_gray     
@@ -57,8 +55,3 @@
       background: -moz-linear-gradient(top, $color_white $height_block, $color_gray $height_block, $color_gray 100%)
       background: -webkit-linear-gradient(top, $color_white $height_block,$color_gray $height_block,$color_gray 100%)
       background: linear-gradient(to bottom, $color_white $height_block,$color_gray $height_block,$color_gray 100%)
-     
-
-
-
-    
