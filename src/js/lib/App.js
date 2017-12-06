@@ -24,7 +24,7 @@ let Ufuture = {
     this.smoothHashLinks();
     this.scrollUp();
     //this.historyBack();
-    this.langSelect();
+    //this.langSelect();
     this.searchBar();
     this.uModal.init();
     if (!this.isMobile()) {
