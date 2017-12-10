@@ -7,15 +7,10 @@
   font-weight: 700
   text-transform: uppercase
   margin-bottom: 50px
-  +rmin(992)
-    margin-left: 0px
-  +r(991)
-    margin-left: -15px
   +r(767)
     font-size: 17px
     line-height: 27px
-    padding-left: 20px
-
+    margin-left: 20px
   &:before
     content: ''
     position: absolute
@@ -27,29 +22,28 @@
     left: -44px
     top: 50%
     transform: translateY(-50%)
-    margin-top: .1em
     +r(767)
-      transform: translateY(0)
-      top: 7px
-      left: 0
-    +rmin(768)
-      transform: translateY(0)
-      top: 7px
- 
+      left: -20px
+      top: .4em
+      transform: none
   &__item
     display: inline-block
     vertical-align: bottom
-  &__item:first-child
-    font-size: 30px
-    line-height: 36px
     +r(767)
-      font-size: 25px
-      line-height: 30px
+      display: block
+  &__item.current
+    font-weight: 300
+    color: #cccccc
+  &__item:first-child
+    font-size: 24px
+    line-height: 30px
   &__divider
     display: inline-block
     vertical-align: bottom
     color: $color_secondary
     margin: 0 10px
+    +r(767)
+      display: none
   &__link
     color: $color_t
     text-decoration: none
@@ -57,11 +51,10 @@
       color: $color_secondary
 
 
-
 .download
   position: relative
-  padding-top: 30px;
-  margin-bottom: 0px;
+  padding-top: 30px
+  margin-bottom: 0px
   font-size: 18px
   line-height: 27px
   color: $color_t
@@ -70,16 +63,12 @@
   text-transform: uppercase
   +rmin(992)
     margin-left: 0px
-  +r(991)
-    
   +r(767)
     font-size: 17px
     line-height: 27px
-    
-    +r(767)
-      transform: translateY(0)
-      top: 7px
-      left: 0
+    transform: translateY(0)
+    top: 7px
+    left: 0
   &__item
     display: inline-block
     vertical-align: bottom
@@ -103,7 +92,7 @@
 .download-img-companies
   position: relative
   top: 3px
-  margin-right: 5px;    
+  margin-right: 5px    
 
 .open_sans 
     font-family: "Open Sans",sans-serif
