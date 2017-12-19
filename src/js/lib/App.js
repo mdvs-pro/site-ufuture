@@ -250,7 +250,7 @@ let Ufuture = {
       
       Array.from(triggers).forEach(link => {
         link.addEventListener(touchEvent, (event) => {
-          this.clickedEl = event.target;
+          this.clickedEl = link;
           event.preventDefault();
           this.open();
         });
@@ -320,6 +320,12 @@ let Ufuture = {
           // iframe.setAttribute("width", document.querySelector(this.containerClass).offsetWidth); 
           // iframe.setAttribute("height", document.querySelector(this.containerClass).offsetHeight); 
           document.querySelector('.u-modal__inner').appendChild(img);
+        case 'html' :
+          let htmlContentOriginal = this.clickedEl.querySelector('.t-grid__desc');
+          let htmlContent = document.createElement('div');
+          htmlContent.classList.add('u-modal__html');
+          htmlContent.innerHTML = htmlContentOriginal.innerHTML;
+          document.querySelector('.u-modal__inner').appendChild(htmlContent);
         default: break;
       }
 

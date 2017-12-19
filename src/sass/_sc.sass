@@ -28,6 +28,11 @@
       background: #ffffff
     &--pb20
       padding-bottom: 20px
+    &--pt20a
+      +r(991)
+        padding-top: 22px!important
+        &:before
+          top: 22px
   &.bg-gradient
     position: relative
     background: $color_gray     
@@ -51,7 +56,7 @@
       background: -webkit-linear-gradient(top, $color_white $height_block,$color_gray $height_block,$color_gray 100%)
       background: linear-gradient(to bottom, $color_white $height_block,$color_gray $height_block,$color_gray 100%)
       +r(767)
-      $height_block: 300px
-      background: -moz-linear-gradient(top, $color_white $height_block, $color_gray $height_block, $color_gray 100%)
-      background: -webkit-linear-gradient(top, $color_white $height_block,$color_gray $height_block,$color_gray 100%)
-      background: linear-gradient(to bottom, $color_white $height_block,$color_gray $height_block,$color_gray 100%)
+        $height_block: 300px
+        background: -moz-linear-gradient(top, $color_white $height_block, $color_gray $height_block, $color_gray 100%)
+        background: -webkit-linear-gradient(top, $color_white $height_block,$color_gray $height_block,$color_gray 100%)
+        background: linear-gradient(to bottom, $color_white $height_block,$color_gray $height_block,$color_gray 100%)
