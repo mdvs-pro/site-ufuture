@@ -9,6 +9,7 @@ let Ufuture = {
   initBody: function(){
     window.onload = () => {
       touchEvent = 'ontouchstart' in window ? 'touchstart' : 'click';
+      touchEvent = 'click';
       this.init();
       document.querySelector('html').classList.add('loaded');
     };
@@ -236,12 +237,15 @@ let Ufuture = {
       window.history.back();
     });
   },
+  // @TODO: take out modal functionality to a separate file
   uModal: {
     el: '.js-u-modal',
     triggerClass: '.u-modal-link',
     containerClass: '.u-modal__container',
     ACTIVE_CLASS: 'modal-open',
-    closeLink: '.u-modal__close',
+    // controllers isn't right name for this element
+    // @TODO: add back blockscreen (overlay)
+    closeLink: '.u-modal__controllers',
     tl: '',
     clickedEl: '',
     init: function(){
@@ -278,15 +282,13 @@ let Ufuture = {
     },
     open: function(){
       this.tl
-        .to(this.el, 0.4, {scale:1})
+        .to(this.el, 0.4, {opacity:1,scale:1})
         .fromTo('.u-modal__bg', 1, {
           x:- (window.innerWidth+300),
           transformOrigin: 'center center',
-          skewType: "simple",
-          skewX: 30
+          skewType: "simple"
         },{
-          x:0,
-          skewX:0
+          x:0
         })
         .fromTo('.u-modal__loader', 0.3, {opacity:0}, {opacity:1})
         .call(()=>{
@@ -300,9 +302,11 @@ let Ufuture = {
           document.querySelector(this.el).classList.remove(this.ACTIVE_CLASS);
           document.querySelector('.u-modal__inner').innerHTML = "";
         })
-        .to(this.el, 0.4, {scale:0})
+        .to(this.el, 0.4, { opacity: 0 })
+        .set(this.el, {scale: 0})
     },
     loadLinkSrc: function(){
+      // @TODO: add gallery type
       let type = this.clickedEl.dataset.modalType;
       let src = this.clickedEl.dataset.modalSrc;
 
@@ -320,12 +324,15 @@ let Ufuture = {
           // iframe.setAttribute("width", document.querySelector(this.containerClass).offsetWidth); 
           // iframe.setAttribute("height", document.querySelector(this.containerClass).offsetHeight); 
           document.querySelector('.u-modal__inner').appendChild(img);
+          break;
         case 'html' :
           let htmlContentOriginal = this.clickedEl.querySelector('.t-grid__desc');
           let htmlContent = document.createElement('div');
           htmlContent.classList.add('u-modal__html');
           htmlContent.innerHTML = htmlContentOriginal.innerHTML;
           document.querySelector('.u-modal__inner').appendChild(htmlContent);
+          console.log('HTML MODAL OPENED');
+          break;
         default: break;
       }
 
